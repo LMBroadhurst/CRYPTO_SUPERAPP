@@ -1,13 +1,13 @@
-// Contract Deployed to OP_GOERLI: 0xa48D89457a94224214Da77931a1AC2FFa5bb2e30
+// Whitelist deployed to OP_GOERLI: 0x12FD4584B4DCc049dEa4fA809479d74037Fb10bb
 
 const hre = require("hardhat");
 
 async function mainDeploy() {
     // Deploy the contract
     const Whitelist = await hre.ethers.getContractFactory("Whitelist");
-    const whitelist = await Whitelist.deploy();
+    const whitelist = await Whitelist.deploy(5);
     await whitelist.deployed();
-    console.log("Whitelist deployed to:", whitelist.address);
+    console.log("Whitelist deployed to OP_GOERLI:", whitelist.address);
 }
 
 mainDeploy().catch((error) => {
