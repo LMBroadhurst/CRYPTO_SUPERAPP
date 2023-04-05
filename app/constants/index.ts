@@ -1,4 +1,4 @@
-export const WHITELIST_CONTRACT_ADDRESS = 0x12FD4584B4DCc049dEa4fA809479d74037Fb10bb;
+export const WHITELIST_CONTRACT_ADDRESS: string = "0x12FD4584B4DCc049dEa4fA809479d74037Fb10bb";
 export const ABI = {
     "_format": "hh-sol-artifact-1",
     "contractName": "Whitelist",

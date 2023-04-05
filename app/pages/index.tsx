@@ -1,47 +1,106 @@
-import react, { useState } from 'react'
+import react, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 
 import { WHITELIST_CONTRACT_ADDRESS, ABI } from '@/constants'
 import { ethers } from 'ethers'
 import { MetaMaskInpageProvider } from '@metamask/providers'
+import { Address } from 'cluster'
 
 
 export default function Home() {
 
-  const getSignerAndProvider = async (): Promise<(ethers.BrowserProvider | ethers.JsonRpcSigner)[] | undefined> => {
+  const [address, setAddress] = useState<string>('')
+  const [walletConnected, setWalletConnected] = useState(false)
+
+  const getSigner = async (): Promise<ethers.JsonRpcSigner | undefined> => {
     try {
       const { ethereum } = window;
       const provider = new ethers.BrowserProvider(ethereum as MetaMaskInpageProvider)
       const signer = await provider.getSigner()
-      console.log(signer, provider)
-      const chainId = await (await provider.getNetwork()).chainId.toString()
-
-      if (chainId !== "420n") {
-        console.log("Connected to OP")
-      } else {
-        throw new Error("Please connect to the OP Network")
-      }
-
-      return [signer, provider]
+      return signer
 
     } catch (error) {
       console.log("Error with the getSigner method: ", error)
     }
+  };
+
+  const getProvider = async (): Promise<ethers.BrowserProvider | undefined> => {
+    try {
+      const { ethereum } = window;
+      const provider = new ethers.BrowserProvider(ethereum as MetaMaskInpageProvider);
+      return provider;
+
+    } catch (error) {
+      console.log("Error with the getProvider method: ", error)
+    }
   }
 
 
-  const addAddressToWhitelist = async () => {
+  const addAddressToWhitelist = async (event: any) => {
+    event.preventDefault()
+
+    try {
+      const signer = await getSigner()
+
+      const contract = new ethers.Contract(WHITELIST_CONTRACT_ADDRESS, ABI.abi, signer)
+      const tx = await contract.addAddressToWhitelist()
+      await tx.wait()
+      await getNumberOfWhitelisted();
+
+    } catch (error) {
+      console.log("Error with the addAddressToWhitelist method: ", error)
+    }
   };
 
   const getNumberOfWhitelisted = async () => {
+
+    try {
+      const provider = await getProvider()
+
+      const contract = new ethers.Contract(WHITELIST_CONTRACT_ADDRESS, ABI.abi, provider)
+      const numberOfWhitelisted = await contract.numberOfAddressesWhitelisted()
+      console.log("numberOfWhitelisted", numberOfWhitelisted.toString())
+
+    } catch (error) {
+      console.log("Error with the getNumberOfWhitelisted method: ", error)
+    }
   };
 
   const checkIfAddressInWhitelist = async () => {
+    try {
+      const signer = await getSigner();
+
+      if (!signer) {
+        throw new Error("Signer is not defined");
+      }
+
+      const whitelistContract = new ethers.Contract(WHITELIST_CONTRACT_ADDRESS, ABI.abi, signer);
+      const address: string = await signer.getAddress();
+      const _joinedWhitelist = await whitelistContract.whitelistedAddresses(address);
+      console.log("joinedWhitelist", _joinedWhitelist);
+
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   const connectWallet = async () => {
+    try {
+      await getSigner();
+      checkIfAddressInWhitelist();
+      getNumberOfWhitelisted();
+      setWalletConnected(true)
+    } catch (err) {
+      console.error(err);
+    }
   };
+
+  useEffect(() => {
+    if (!walletConnected) {
+      connectWallet();
+    }
+  }, [])
 
 
   return (
@@ -54,8 +113,12 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
 
-        <button onClick={getSignerAndProvider}>Click Me</button>
-        
+        <form>
+          <input type="text" placeholder="Enter ETH address" value={address} onChange={(event) => setAddress(event.target.value)}/>
+          <button onClick={(event) => addAddressToWhitelist(event)}>Add Address</button>
+        </form>
+
+        <button onClick={(event: any) => getSigner()}>Click Me</button>
       </main>
     </>
   )
