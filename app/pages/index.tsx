@@ -1,11 +1,45 @@
+import react, { useState } from 'react'
+
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
+import { Web3Modal } from "@web3modal/standalone";
+import SignClient from "@walletconnect/sign-client";
+import { WHITELIST_CONTRACT_ADDRESS, ABI } from '@/constants'
+
+if (!process.env.NEXT_PUBLIC_PROJECT_ID) {
+  throw new Error("You need to provide NEXT_PUBLIC_PROJECT_ID env variable");
+}
+
+const web3Modal: Web3Modal = new Web3Modal({
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  walletConnectVersion: 2,
+});
 
 export default function Home() {
+
+  const [walletConnected, setWalletConnected] = useState(false);
+  const [joinedWhitelist, setJoinedWhitelist] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [numberOfWhitelisted, setNumberOfWhitelisted] = useState(0);
+
+  const getProviderOrSigner = async (needSigner = false) => {
+    
+  };
+
+  const addAddressToWhitelist = async () => {
+  };
+
+  const getNumberOfWhitelisted = async () => {
+  };
+
+  const checkIfAddressInWhitelist = async () => {
+  };
+
+  const connectWallet = async () => {
+  };
+
+
   return (
     <>
       <Head>
@@ -15,108 +49,25 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
+        <div className={styles.main}>
           <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+            <h1 className={styles.title}>Welcome to Crypto Devs!</h1>
+            <div className={styles.description}>
+              {/* Using HTML Entities for the apostrophe */}
+              It&#39;s an NFT collection for developers in Crypto.
+            </div>
+            <div className={styles.description}>
+              {numberOfWhitelisted} have already joined the Whitelist
+            </div>
+          </div>
+          <div>
+            <img className={styles.image} src="./crypto-devs.svg" />
           </div>
         </div>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
+        <footer className={styles.footer}>
+          Made with &#10084; by Crypto Devs
+        </footer>
       </main>
     </>
   )
