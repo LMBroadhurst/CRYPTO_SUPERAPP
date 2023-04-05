@@ -1,31 +1,35 @@
 import react, { useState } from 'react'
-
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 
-import { Web3Modal } from "@web3modal/standalone";
-import SignClient from "@walletconnect/sign-client";
 import { WHITELIST_CONTRACT_ADDRESS, ABI } from '@/constants'
+import { ethers } from 'ethers'
+import { MetaMaskInpageProvider } from '@metamask/providers'
 
-if (!process.env.NEXT_PUBLIC_PROJECT_ID) {
-  throw new Error("You need to provide NEXT_PUBLIC_PROJECT_ID env variable");
-}
-
-const web3Modal: Web3Modal = new Web3Modal({
-  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
-  walletConnectVersion: 2,
-});
 
 export default function Home() {
 
-  const [walletConnected, setWalletConnected] = useState(false);
-  const [joinedWhitelist, setJoinedWhitelist] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [numberOfWhitelisted, setNumberOfWhitelisted] = useState(0);
+  const getSignerAndProvider = async (): Promise<(ethers.BrowserProvider | ethers.JsonRpcSigner)[] | undefined> => {
+    try {
+      const { ethereum } = window;
+      const provider = new ethers.BrowserProvider(ethereum as MetaMaskInpageProvider)
+      const signer = await provider.getSigner()
+      console.log(signer, provider)
+      const chainId = await (await provider.getNetwork()).chainId.toString()
 
-  const getProviderOrSigner = async (needSigner = false) => {
-    
-  };
+      if (chainId !== "420n") {
+        console.log("Connected to OP")
+      } else {
+        throw new Error("Please connect to the OP Network")
+      }
+
+      return [signer, provider]
+
+    } catch (error) {
+      console.log("Error with the getSigner method: ", error)
+    }
+  }
+
 
   const addAddressToWhitelist = async () => {
   };
@@ -49,25 +53,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.main}>
-          <div>
-            <h1 className={styles.title}>Welcome to Crypto Devs!</h1>
-            <div className={styles.description}>
-              {/* Using HTML Entities for the apostrophe */}
-              It&#39;s an NFT collection for developers in Crypto.
-            </div>
-            <div className={styles.description}>
-              {numberOfWhitelisted} have already joined the Whitelist
-            </div>
-          </div>
-          <div>
-            <img className={styles.image} src="./crypto-devs.svg" />
-          </div>
-        </div>
 
-        <footer className={styles.footer}>
-          Made with &#10084; by Crypto Devs
-        </footer>
+        <button onClick={getSignerAndProvider}>Click Me</button>
+        
       </main>
     </>
   )
