@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import whitelistReducer from './whitelist/whitelistSlice'
+import authReducer from './auth/authSlice'
 
 export const store = configureStore({
   reducer: {
     whitelist: whitelistReducer,
+    auth: authReducer
   },
 })
 

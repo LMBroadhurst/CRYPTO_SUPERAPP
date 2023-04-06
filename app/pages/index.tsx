@@ -1,14 +1,13 @@
 import react, { useState, useEffect } from 'react'
 import Head from 'next/head'
-import styles from '@/styles/Home.module.css'
+import Header from '@/components/Header'
 
 import { WHITELIST_CONTRACT_ADDRESS, ABI } from '@/constants'
 import { ethers } from 'ethers'
 import { MetaMaskInpageProvider } from '@metamask/providers'
-import { Address } from 'cluster'
-import Header from '@/components/Header'
 import { selectNumberOfWhitelistedAddresses, setNumberOfWhitelistedAddresses } from '@/redux/whitelist/whitelistSlice'
 import { useDispatch, useSelector } from 'react-redux'
+import useGetSigner from '@/hooks/getSigner'
 
 
 export default function Home() {
@@ -18,18 +17,7 @@ export default function Home() {
 
   const numberOfWhitelistedAddresses = useSelector(selectNumberOfWhitelistedAddresses)
   const dispatch = useDispatch()
-
-  const getSigner = async (): Promise<ethers.JsonRpcSigner | undefined> => {
-    try {
-      const { ethereum } = window;
-      const provider = new ethers.BrowserProvider(ethereum as MetaMaskInpageProvider)
-      const signer = await provider.getSigner()
-      return signer
-
-    } catch (error) {
-      console.log("Error with the getSigner method: ", error)
-    }
-  };
+  const { _signer, connectSigner } = useGetSigner()
 
   const getProvider = async (): Promise<ethers.BrowserProvider | undefined> => {
     try {
@@ -47,9 +35,8 @@ export default function Home() {
     event.preventDefault()
 
     try {
-      const signer = await getSigner()
-
-      const contract = new ethers.Contract(WHITELIST_CONTRACT_ADDRESS, ABI.abi, signer)
+      await connectSigner()
+      const contract = new ethers.Contract(WHITELIST_CONTRACT_ADDRESS, ABI.abi, _signer)
       const tx = await contract.addAddressToWhitelist()
       await tx.wait()
       await getNumberOfWhitelisted();
@@ -77,14 +64,14 @@ export default function Home() {
 
   const checkIfAddressInWhitelist = async () => {
     try {
-      const signer = await getSigner();
+      await connectSigner()
 
-      if (!signer) {
+      if (!_signer) {
         throw new Error("Signer is not defined");
       }
 
-      const whitelistContract = new ethers.Contract(WHITELIST_CONTRACT_ADDRESS, ABI.abi, signer);
-      const address: string = await signer.getAddress();
+      const whitelistContract = new ethers.Contract(WHITELIST_CONTRACT_ADDRESS, ABI.abi, _signer);
+      const address: string = await _signer.getAddress();
       const _joinedWhitelist = await whitelistContract.whitelistedAddresses(address);
       console.log("joinedWhitelist", _joinedWhitelist);
 
@@ -95,7 +82,7 @@ export default function Home() {
 
   const connectWallet = async () => {
     try {
-      await getSigner();
+      connectSigner
       checkIfAddressInWhitelist();
       getNumberOfWhitelisted();
       setWalletConnected(true)
