@@ -6,12 +6,18 @@ import { WHITELIST_CONTRACT_ADDRESS, ABI } from '@/constants'
 import { ethers } from 'ethers'
 import { MetaMaskInpageProvider } from '@metamask/providers'
 import { Address } from 'cluster'
+import Header from '@/components/Header'
+import { selectNumberOfWhitelistedAddresses, setNumberOfWhitelistedAddresses } from '@/redux/whitelist/whitelistSlice'
+import { useDispatch, useSelector } from 'react-redux'
 
 
 export default function Home() {
 
   const [address, setAddress] = useState<string>('')
   const [walletConnected, setWalletConnected] = useState(false)
+
+  const numberOfWhitelistedAddresses = useSelector(selectNumberOfWhitelistedAddresses)
+  const dispatch = useDispatch()
 
   const getSigner = async (): Promise<ethers.JsonRpcSigner | undefined> => {
     try {
@@ -62,6 +68,8 @@ export default function Home() {
       const numberOfWhitelisted = await contract.numberOfAddressesWhitelisted()
       console.log("numberOfWhitelisted", numberOfWhitelisted.toString())
 
+      dispatch(setNumberOfWhitelistedAddresses(numberOfWhitelisted.toString()))
+
     } catch (error) {
       console.log("Error with the getNumberOfWhitelisted method: ", error)
     }
@@ -111,14 +119,37 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main>
 
-        <form>
-          <input type="text" placeholder="Enter ETH address" value={address} onChange={(event) => setAddress(event.target.value)}/>
-          <button onClick={(event) => addAddressToWhitelist(event)}>Add Address</button>
-        </form>
+        <Header />
 
-        <button onClick={(event: any) => getSigner()}>Click Me</button>
+          <section className='grid grid-cols-2 gap-4 p-10'>
+            <div className='border-black border rounded-xl p-5'>
+              <section>
+                <h2>ICO Whitelist</h2>
+
+                <p>Join the whitelist to participate in the ICO</p>
+
+                {
+                  numberOfWhitelistedAddresses ? <p>Currently we have {numberOfWhitelistedAddresses} participants :D</p> : null
+                }
+
+                <form>
+                  <button onClick={(event) => addAddressToWhitelist(event)}>Join Whitelist</button>
+                </form>
+              </section>
+            </div>
+
+
+
+
+            <div className='border-black border rounded-xl'></div>
+            <div className='border-black border rounded-xl'></div>
+            <div className='border-black border rounded-xl'></div>
+            <div className='border-black border rounded-xl'></div>
+            <div className='border-black border rounded-xl'></div>
+          </section>
+
       </main>
     </>
   )

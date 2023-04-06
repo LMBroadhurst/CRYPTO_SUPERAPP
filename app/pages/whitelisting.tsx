@@ -1,8 +1,13 @@
+import Header from '@/components/Header'
 import React from 'react'
 
 const whitelisting: React.FC = () => {
   return (
-    <div>whitelisting</div>
+    <main>
+      <div>
+        <Header />
+      </div>
+    </main>
   )
 }
 
