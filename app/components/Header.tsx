@@ -1,11 +1,13 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectWalletAddress } from '../redux/auth/authSlice'
+import useGetSigner from '@/hooks/getSigner'
 
 const Header: React.FC = () => {
 
   const dispatch = useDispatch()
   const currentWallet: string = useSelector(selectWalletAddress)
+  const { connectSigner} = useGetSigner()
 
   return (
     <header className='bg-gray-200'>
@@ -17,7 +19,7 @@ const Header: React.FC = () => {
             <li>Home</li>
             <li>
               {
-                currentWallet ? <p>{currentWallet}</p> : <button className='bg-black p-2 rounded-lg text-white'>Connect Wallet</button>
+                currentWallet ? <p>{currentWallet}</p> : <button className='bg-black p-2 rounded-lg text-white' onClick={connectSigner}>Connect Wallet</button>
               }
             </li>
           </ul>
