@@ -23,6 +23,7 @@
     "@web3modal/react": "^2.2.2",
     "@web3modal/standalone": "^2.2.2",
     "alchemy-sdk": "^2.7.0",
+    "antd": "^5.4.7",
     "dotenv": "^16.0.3",
     "ethers": "^6.2.3",
     "next": "13.2.4",

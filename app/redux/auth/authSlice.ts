@@ -33,7 +33,11 @@ export const authSlice = createSlice({
   },
 )
 
-export const { setWalletAddress, setSigner } = authSlice.actions
+export const {
+    setWalletAddress,
+    setSigner,
+    logout
+} = authSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
 // export const selectCount = (state: RootState) => state.counter.value

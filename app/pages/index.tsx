@@ -22,8 +22,7 @@ export default function Home() {
   const getProvider = async (): Promise<ethers.BrowserProvider | undefined> => {
     try {
       const { ethereum } = window;
-      const provider = new ethers.BrowserProvider(ethereum as MetaMaskInpageProvider);
-      return provider;
+      return new ethers.BrowserProvider(ethereum as MetaMaskInpageProvider);
 
     } catch (error) {
       console.log("Error with the getProvider method: ", error)
@@ -82,9 +81,9 @@ export default function Home() {
 
   const connectWallet = async () => {
     try {
-      connectSigner
-      checkIfAddressInWhitelist();
-      getNumberOfWhitelisted();
+      await connectSigner();
+      await checkIfAddressInWhitelist();
+      await getNumberOfWhitelisted();
       setWalletConnected(true)
     } catch (err) {
       console.error(err);
@@ -109,33 +108,6 @@ export default function Home() {
       <main>
 
         <Header />
-
-          <section className='grid grid-cols-2 gap-4 p-10'>
-            <div className='border-black border rounded-xl p-5'>
-              <section>
-                <h2>ICO Whitelist</h2>
-
-                <p>Join the whitelist to participate in the ICO</p>
-
-                {
-                  numberOfWhitelistedAddresses ? <p>Currently we have {numberOfWhitelistedAddresses} participants :D</p> : null
-                }
-
-                <form>
-                  <button onClick={(event) => addAddressToWhitelist(event)}>Join Whitelist</button>
-                </form>
-              </section>
-            </div>
-
-
-
-
-            <div className='border-black border rounded-xl'></div>
-            <div className='border-black border rounded-xl'></div>
-            <div className='border-black border rounded-xl'></div>
-            <div className='border-black border rounded-xl'></div>
-            <div className='border-black border rounded-xl'></div>
-          </section>
 
       </main>
     </>

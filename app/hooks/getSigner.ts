@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { setWalletAddress, selectWalletAddress, selectSigner, setSigner } from '../redux/auth/authSlice'
+import { setWalletAddress, selectSigner, setSigner } from '@/redux/auth/authSlice'
 
 import { ethers } from 'ethers'
 import { MetaMaskInpageProvider } from '@metamask/providers';
