@@ -4,6 +4,11 @@ import { selectWalletAddress, logout } from '@/redux/auth/authSlice'
 import useGetSigner from '@/hooks/getSigner'
 import {Button, Dropdown, Space} from "antd";
 import {MenuProps} from "antd/lib";
+import {DownOutlined} from "@ant-design/icons";
+import Icon from "antd/es/icon";
+import ETH from "@/assets/icons8-ethereum-48.png";
+import Image from "next/image";
+import {SwapOutlined} from "@ant-design/icons";
 
 const Header: React.FC = () => {
 
@@ -11,30 +16,26 @@ const Header: React.FC = () => {
   const currentWallet: string = useSelector(selectWalletAddress)
   const { connectSigner} = useGetSigner()
 
-  const items: MenuProps['items'] = [
+  const apps: MenuProps["items"] = [
     {
-      key: '1',
+      key: 'UNISWAP',
       label: (
-          <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-            1st menu item
-          </a>
+          <div className={'flex flex-row justify-between items-center'}>
+            <span>Uniswap V1</span>
+            <SwapOutlined />
+          </div>
       ),
+    }
+  ];
+
+  const testnets: MenuProps['items'] = [
+    {
+      key: 'SEPOLIA',
+      label: <span>Sepolia Testnet</span>,
     },
     {
-      key: '2',
-      label: (
-          <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-            2nd menu item
-          </a>
-      ),
-    },
-    {
-      key: '3',
-      label: (
-          <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-            3rd menu item
-          </a>
-      ),
+      key: 'GOERLI',
+      label: <span>Goerli Testnet</span>,
     },
   ];
 
@@ -42,39 +43,63 @@ const Header: React.FC = () => {
     dispatch(logout());
   };
 
-  return (
-    <header className='bg-gray-200'>
-      <div className='flex flex-row justify-between p-10 py-5 items-center'>
+  return (<header className='bg-gray-600'>
+    <div className='flex flex-row justify-between p-10 py-2 items-center'>
+      <div className={'flex flex-row items-center gap-8'}>
         <h1>CRYPTO SUPERAPP</h1>
 
-        <nav>
-          <ul className='flex flex-row gap-8 items-center'>
-            <li>
-              <Dropdown menu={{ items }} placement={"bottomRight"} >
-                <Button type={'primary'}>Ello</Button>
-              </Dropdown>
-            </li>
-            <li>
-              {
-                currentWallet ?
-                    // TODO: Create standardised button components or use ANTD
-                    <button
-                        onClick={handleLogout}
-                    >
-                      {currentWallet.slice(0, 4)}...{currentWallet.slice(38)}
-                    </button> :
-                    <button
-                        className='bg-black p-2 rounded-lg text-white'
-                        onClick={connectSigner}
-                    >
-                      Connect Wallet
-                    </button>
-              }
-            </li>
-          </ul>
-        </nav>
+        <Dropdown menu={{items: apps}} placement={"bottomRight"} >
+          <Button
+              type={'primary'}
+              className={'flex flex-row items-center gap-2'}
+          >
+            <div className={'flex flex-row items-center gap-2'}>
+              <span>Uniswap V1</span>
+              <SwapOutlined />
+            </div>
+
+            <DownOutlined />
+          </Button>
+        </Dropdown>
       </div>
-    </header>
+
+      <nav>
+        <ul className='flex flex-row gap-4 items-center'>
+          <li>
+            <Dropdown menu={{items: testnets}} placement={"bottomRight"} >
+              <Button
+                  type={'primary'}
+                  className={'flex flex-row items-center gap-2'}
+              >
+                <div className={'flex flex-row items-center'}>
+                  <span>Sepolia</span>
+                  <Image src={ETH} alt={'ETH symbol'} className={'w-4'}/>
+                </div>
+
+                <DownOutlined />
+              </Button>
+            </Dropdown>
+          </li>
+          <li>
+            {
+              currentWallet ?
+                  // TODO: Create standardised button components or use ANTD
+                  <Button
+                      onClick={handleLogout}
+                  >
+                    {currentWallet.slice(0, 4)}...{currentWallet.slice(38)}
+                  </Button> :
+                  <Button
+                      onClick={connectSigner}
+                  >
+                    Connect Wallet
+                  </Button>
+            }
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   )
 }
 
