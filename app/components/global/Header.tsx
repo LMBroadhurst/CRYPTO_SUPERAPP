@@ -9,6 +9,7 @@ import Icon from "antd/es/icon";
 import ETH from "@/assets/icons8-ethereum-48.png";
 import Image from "next/image";
 import {SwapOutlined} from "@ant-design/icons";
+import Link from "next/link";
 
 const Header: React.FC = () => {
 
@@ -20,10 +21,13 @@ const Header: React.FC = () => {
     {
       key: 'UNISWAP',
       label: (
-          <div className={'flex flex-row justify-between items-center'}>
+          <Link
+              className={'flex flex-row justify-between items-center'}
+              href={'/uniswapv1'}
+          >
             <span>Uniswap V1</span>
             <SwapOutlined />
-          </div>
+          </Link>
       ),
     }
   ];
@@ -45,26 +49,27 @@ const Header: React.FC = () => {
 
   return (<header className='bg-gray-600'>
     <div className='flex flex-row justify-between p-10 py-2 items-center'>
-      <div className={'flex flex-row items-center gap-8'}>
-        <h1>CRYPTO SUPERAPP</h1>
 
-        <Dropdown menu={{items: apps}} placement={"bottomRight"} >
-          <Button
-              type={'primary'}
-              className={'flex flex-row items-center gap-2'}
-          >
-            <div className={'flex flex-row items-center gap-2'}>
-              <span>Uniswap V1</span>
-              <SwapOutlined />
-            </div>
-
-            <DownOutlined />
-          </Button>
-        </Dropdown>
-      </div>
+      <h1>CRYPTO SUPERAPP</h1>
 
       <nav>
         <ul className='flex flex-row gap-4 items-center'>
+          <li>
+            <Dropdown menu={{items: apps}} placement={"bottomRight"} >
+              <Button
+                  type={'primary'}
+                  className={'flex flex-row items-center gap-2'}
+              >
+                <div className={'flex flex-row items-center gap-2'}>
+                  <span>Uniswap V1</span>
+                  <SwapOutlined />
+                </div>
+
+                <DownOutlined />
+              </Button>
+            </Dropdown>
+          </li>
+
           <li>
             <Dropdown menu={{items: testnets}} placement={"bottomRight"} >
               <Button
@@ -80,6 +85,7 @@ const Header: React.FC = () => {
               </Button>
             </Dropdown>
           </li>
+
           <li>
             {
               currentWallet ?

@@ -1,6 +1,6 @@
 import react, { useState, useEffect } from 'react'
 import Head from 'next/head'
-import Header from '@/components/Header'
+import Header from '@/components/global/Header'
 
 import { WHITELIST_CONTRACT_ADDRESS, ABI } from '@/constants'
 import { ethers } from 'ethers'
