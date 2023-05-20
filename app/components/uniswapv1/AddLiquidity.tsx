@@ -11,32 +11,38 @@ const AddLiquidity: React.FC<OwnProps> = () => {
     const handleTokenXChange = (e: any) => setTokenXAmount(e.target.value);
     const handleTokenYChange = (e: any) => setTokenYAmount(e.target.value);
 
+
+
+
     return (
-        <form
-            className={`
-                flex flex-col justify-center gap-4 
-                mx-auto h-[400px] my-auto w-[450px]
-            `}
-        >
+        <section>
+            <form
+                className={`
+                    flex flex-col justify-center gap-4 
+                    mx-auto h-[400px] my-auto w-[450px]
+                `}
+            >
 
-            <TokenInput
-                value={tokenXAmount}
-                handleOnChange={handleTokenXChange}
-            />
+                <TokenInput
+                    value={tokenXAmount}
+                    handleOnChange={handleTokenXChange}
+                />
 
-            <span className={'-my-3 self-center rounded text-2xl'}>+</span>
+                <span className={'-my-3 self-center rounded text-2xl'}>+</span>
 
-            <TokenInput
-                value={tokenYAmount}
-                handleOnChange={handleTokenYChange}
-            />
+                <TokenInput
+                    value={tokenYAmount}
+                    handleOnChange={handleTokenYChange}
+                />
 
-            <Button
-                buttonText={tokenXAmount || tokenYAmount ? 'Add Liquidity' : 'Enter an amount'}
-                width={350}
-            />
+                <Button
+                    buttonText={tokenXAmount || tokenYAmount ? 'Add Liquidity' : 'Enter an amount'}
+                    width={350}
+                />
+            </form>
 
-        </form>
+
+        </section>
     )
 };
 
