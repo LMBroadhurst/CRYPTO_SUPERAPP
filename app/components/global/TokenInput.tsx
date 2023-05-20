@@ -1,31 +1,57 @@
-import React from "react";
+import React, {useState} from "react";
 
 type OwnProps = {
     value: number | undefined;
     handleOnChange: (e: any) => void;
+    inputTextSize?: 'text-sm' | 'text-md' | 'text-lg' | 'text-xl';
+    tabTextSize?: 'text-sm' | 'text-md' | 'text-lg' | 'text-xl';
+    width?: number;
 };
 
 const TokenInput: React.FC<OwnProps> = (
     {
         value,
-        handleOnChange
+        handleOnChange,
+        width,
+        tabTextSize
     }
 ) => {
 
+    const [isFocused, setIsFocused] = useState(false);
+
+    const handleFocus = () => setIsFocused(!isFocused);
+
     return (
-        <div className={'inline-flex flex-row w-fit'}>
+        <div
+            className={`
+                ${width ? `w-[${width}px]` : ''}
+                flex flex-row items-center
+                border-2 border-gray-500 rounded-lg 
+                h-28 p-2 
+            `}
+            onClick={handleFocus}
+        >
             <input
-                className={'border-2 border-gray-500 rounded-lg h-28 px-2 text-5xl'}
-                value={value ? value : undefined}
+                className={`
+                    text-3xl ${tabTextSize ? tabTextSize : ''}
+                    w-2/3
+                    focus:outline-0
+                `}
+                value={value}
                 placeholder={'0'}
                 type={'number'}
                 onChange={handleOnChange}
             />
 
-            <div className={'-ml-28 min-w-max self-center flex flex-col items-end gap-2 text-xl'}>
-                <p className={''}>Token: ETH</p>
+            <div
+                className={`
+                    text-base ${tabTextSize ? tabTextSize : ''}
+                    w-1/3 text-xl flex flex-col items-end
+                `}
+            >
+                <span>Token: ETH</span>
 
-                <p>Balance: 0</p>
+                <span>Balance: 0</span>
             </div>
         </div>
     )

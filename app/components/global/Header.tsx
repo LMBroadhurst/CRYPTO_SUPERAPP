@@ -19,17 +19,28 @@ const Header: React.FC = () => {
 
   const apps: MenuProps["items"] = [
     {
-      key: 'UNISWAP',
+      key: 'BLOG',
       label: (
           <Link
               className={'flex flex-row justify-between items-center'}
+              href={'/blog'}
+          >
+            <span>Blog</span>
+          </Link>
+      ),
+    },
+    {
+      key: 'UNISWAP',
+      label: (
+          <Link
+              className={'flex flex-row justify-between items-center w-32'}
               href={'/uniswapv1'}
           >
             <span>Uniswap V1</span>
             <SwapOutlined />
           </Link>
       ),
-    }
+    },
   ];
 
   const testnets: MenuProps['items'] = [
@@ -50,7 +61,7 @@ const Header: React.FC = () => {
   return (<header className='bg-gray-600'>
     <div className='flex flex-row justify-between p-10 py-2 items-center'>
 
-      <h1>CRYPTO SUPERAPP</h1>
+      <h1>LewisBroadhurst.dev</h1>
 
       <nav>
         <ul className='flex flex-row gap-4 items-center'>
@@ -61,8 +72,7 @@ const Header: React.FC = () => {
                   className={'flex flex-row items-center gap-2'}
               >
                 <div className={'flex flex-row items-center gap-2'}>
-                  <span>Uniswap V1</span>
-                  <SwapOutlined />
+                  Apps
                 </div>
 
                 <DownOutlined />

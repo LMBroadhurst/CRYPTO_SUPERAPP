@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import {Card} from "antd";
-import SwapTokens from "@/components/uniswapv1/swap/SwapTokens";
+import SwapTokens from "@/components/uniswapv1/SwapTokens";
+import Tokens from "@/components/uniswapv1/Tokens";
+import AddLiquidity from "@/components/uniswapv1/AddLiquidity";
 
 type OwnProps = {
 
@@ -15,10 +17,10 @@ const tabList = [
         key: 'addLiquidity',
         tab: 'Add Liquidity',
     },
-    {
-        key: 'tokens',
-        tab: 'Tokens',
-    },
+    // {
+    //     key: 'tokens',
+    //     tab: 'Tokens',
+    // },
 ];
 
 const UniswapV1View: React.FC<OwnProps> = () => {
@@ -30,17 +32,19 @@ const UniswapV1View: React.FC<OwnProps> = () => {
     };
 
     return (
-        <Card
-            title={'Uniswap V1 🦄'}
-            className={'w-[1000px] mx-auto h-max flex flex-col flex-grow'}
-            tabList={tabList}
-            activeTabKey={activeTabKey}
-            onTabChange={handleTabChange}
-        >
-            {activeTabKey == 'swap' && <SwapTokens />}
-            {activeTabKey == 'addLiquidity' && <p>I work2</p>}
-            {activeTabKey == 'tokens' && <p>I work3</p>}
-        </Card>
+        <div className={'flex flex-col justify-center items-center'}>
+            <Card
+                title={<h2 className={'text-2xl'}>Uniswap V1 🦄</h2>}
+                className={'mx-auto w-[800px] h-[600px] flex flex-col justify-center'}
+                tabList={tabList}
+                activeTabKey={activeTabKey}
+                onTabChange={handleTabChange}
+            >
+                {activeTabKey == 'swap' && <SwapTokens />}
+                {activeTabKey == 'addLiquidity' && <AddLiquidity />}
+                {/*{activeTabKey == 'tokens' && <Tokens />}*/}
+            </Card>
+        </div>
     )
 }
 
