@@ -3,9 +3,11 @@ import Header from "@/components/global/Header";
 
 type OwnProps = {};
 
-const Blog: React.FC<OwnProps> = () => {
+const Blog = () => {
 
     return (
         <Header />
     )
 }
+
+export default Blog;
