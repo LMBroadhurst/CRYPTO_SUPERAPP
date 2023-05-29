@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "@/components/global/Header";
+import Header from "@/components/apps/Header";
 
 type OwnProps = {};
 

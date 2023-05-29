@@ -1,4 +1,4 @@
-import Header from '@/components/global/Header'
+import Header from '@/components/apps/Header'
 import React from 'react'
 
 const whitelisting: React.FC = () => {

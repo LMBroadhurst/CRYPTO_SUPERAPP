@@ -2,13 +2,6 @@ import react, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Header from '@/components/global/Header'
 
-import { WHITELIST_CONTRACT_ADDRESS, ABI } from '@/constants'
-import { ethers } from 'ethers'
-import { MetaMaskInpageProvider } from '@metamask/providers'
-import { selectNumberOfWhitelistedAddresses, setNumberOfWhitelistedAddresses } from '@/redux/whitelist/whitelistSlice'
-import { useDispatch, useSelector } from 'react-redux'
-import useGetSigner from '@/hooks/getSigner'
-
 
 export default function Home() {
 
@@ -20,7 +13,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className='text-white'>
         <Header />
       </main>
     </>
