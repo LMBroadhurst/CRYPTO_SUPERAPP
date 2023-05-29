@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Header from '@/components/global/Header';
+import Header from '@/components/home/Header';
 import HomeView from '@/components/home/HomeView';
-import Footer from '@/components/global/Footer';
+import Footer from '@/components/home/Footer';
 
 
 

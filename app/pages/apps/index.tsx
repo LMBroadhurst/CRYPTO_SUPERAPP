@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "@/components/apps/Header";
 import UniswapV1View from "@/components/apps/uniswapv1/UniswapV1View";
-import Footer from "@/components/global/Footer";
+import Footer from "@/components/home/Footer";
 
 type OwnProps = {};
 
