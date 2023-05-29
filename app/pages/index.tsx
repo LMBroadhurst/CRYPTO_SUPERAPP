@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Header from '@/components/home/Header';
 import HomeView from '@/components/home/HomeView';
 import Footer from '@/components/home/Footer';
+import Experience from '@/components/home/Experience';
 
 
 
@@ -19,7 +20,13 @@ export default function Home() {
       <main className='text-white bg-gray-800 flex flex-col gap-6 lg:gap-24 xl:gap-36'>
         <Header />
 
-        <HomeView />
+        {/* // Should create a custom container for each section to avoid repeating code :) */}
+
+        <section className='flex flex-col gap-6 lg:gap-24 xl:gap-36'>
+          <HomeView />
+
+          <Experience />
+        </section>
 
         <Footer />
       </main>

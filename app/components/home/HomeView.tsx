@@ -5,7 +5,7 @@ const HomeView: React.FC = () => {
 
     return (
         <section className='text-xl px-10 flex flex-col items-center gap-5 lg:flex-row-reverse lg:w-[900px] lg:m-auto lg:gap-10 xl:w-[1150px] xl:gap-20'>
-            <img src={code.src} alt="Logo" className='rounded-2xl lg:w-3/5' />
+            <img src={code.src} alt="Logo" className='rounded-2xl lg:w-1/2' />
 
             <section className='flex flex-col gap-5 lg:gap-4 xl:gap-6'>
                 <section className='flex flex-col gap-2 text-left lg:gap-4 xl:gap-6'>
