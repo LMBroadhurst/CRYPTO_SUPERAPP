@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Header from '@/components/global/Header';
 import HomeView from '@/components/home/HomeView';
+import Footer from '@/components/global/Footer';
 
 
 
@@ -15,10 +16,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='text-white bg-gray-800 flex flex-col'>
+      <main className='text-white bg-gray-800 flex flex-col gap-6 lg:gap-24 xl:gap-36'>
         <Header />
 
         <HomeView />
+
+        <Footer />
       </main>
     </>
   )

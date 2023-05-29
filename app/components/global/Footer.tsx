@@ -1,12 +1,16 @@
 import React from 'react'
 import {BugOutlined} from "@ant-design/icons";
 
-const Footer = () => {
+const Footer = () => { 
+  
+  
   return (
-    <div className={'h-10 bg-blue-300 flex flex-row items-center justify-center gap-1'}>
-      <h4>Found a bug?</h4>
-      <BugOutlined />
-    </div>
+    <footer className='p-4'>
+      <section className={'flex flex-row items-center justify-center gap-2'}>
+        <h4>Report a bug</h4>
+        <BugOutlined />
+      </section>
+    </footer>
   )
 }
 
