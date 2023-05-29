@@ -1,6 +1,8 @@
-import react, { useState, useEffect } from 'react'
-import Head from 'next/head'
-import Header from '@/components/global/Header'
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Header from '@/components/global/Header';
+import HomeView from '@/components/home/HomeView';
+
 
 
 export default function Home() {
@@ -13,8 +15,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='text-white'>
+      <main className='text-white bg-gray-800 flex flex-col'>
         <Header />
+
+        <HomeView />
       </main>
     </>
   )

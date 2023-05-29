@@ -3,14 +3,16 @@ import { MenuOutlined } from "@ant-design/icons";
 
 const Header: React.FC = () => {
 
-  return (<header className='bg-gray-600'>
+  return (<header className='text-2xl p-2'>
     <section className='flex flex-row justify-between py-2 items-center'>
 
       <h1>lewisbroadhurst.dev</h1>
 
-      <div className='border w-10 h-10 rounded-full flex flex-col items-center justify-center'>
+      <div className='border-gray-600 border-2 w-10 h-10 rounded-xl flex flex-col items-center justify-center'>
         <MenuOutlined />
       </div>
+
+      {/* <button>App</button> */}
 
       <nav className='hidden'>
         <ul className='flex flex-row items-center gap-8'>

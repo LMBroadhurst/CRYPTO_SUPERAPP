@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "@/components/apps/Header";
-import UniswapV1View from "@/components/uniswapv1/UniswapV1View";
+import UniswapV1View from "@/components/apps/uniswapv1/UniswapV1View";
 import Footer from "@/components/global/Footer";
 
 type OwnProps = {};
