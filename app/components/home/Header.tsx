@@ -5,8 +5,8 @@ const Header: React.FC = () => {
   
   
   return (
-    <header className='text-2xl p-4'>
-      <section className='flex flex-row justify-between items-center'>
+    <header className='text-2xl px-4 h-[15vh]'>
+      <section className='flex flex-row justify-between items-center h-full'>
 
         <h1>lewisbroadhurst.dev</h1>
 

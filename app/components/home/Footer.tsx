@@ -5,8 +5,8 @@ const Footer = () => {
   
   
   return (
-    <footer className='p-4'>
-      <section className={'flex flex-row items-center justify-center gap-2'}>
+    <footer className='p-4 h-[15vh]'>
+      <section className={'flex flex-row items-center justify-center gap-2 h-full'}>
         <h4>Report a bug</h4>
         <BugOutlined />
       </section>

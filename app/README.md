@@ -9,3 +9,5 @@ This is to ensure each section is clearly associated with the correct elements, 
 with the UI.
 
 Of course for each device, phone/tablet/pc these values will scale up.
+
+VH... Started implementing VH in this project, just realised how people build websites with seemingly perfect dimensions per page.
