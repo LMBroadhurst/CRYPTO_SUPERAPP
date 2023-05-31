@@ -1,14 +1,13 @@
 import React from "react";
-import SectionContainer from "./SectionContainer";
-import { GithubFilled } from "@ant-design/icons";
+import { SectionContainer } from "../global/Containers";
 
 const Experience: React.FC = () => {
 
     // Can I get a rotating series of icons for react?
 
     return (
-        <SectionContainer vh={85}>
-            <section className="w-96 h-96">
+        <SectionContainer vh={100}>
+            <section className="w-40 h-40">
                 Big rotating frame with react/jave/ts/... symbols
             </section>
 

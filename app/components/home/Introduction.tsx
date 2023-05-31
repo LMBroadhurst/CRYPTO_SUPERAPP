@@ -1,6 +1,6 @@
 import React from 'react';
+import { SectionContainer } from "../global/Containers";
 import code from '../../assets/carbon.png';
-import SectionContainer from './SectionContainer';
 
 const HomeView: React.FC = () => {
 

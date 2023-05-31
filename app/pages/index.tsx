@@ -4,6 +4,7 @@ import Header from '@/components/home/Header';
 import Introduction from '@/components/home/Introduction';
 import Footer from '@/components/home/Footer';
 import Experience from '@/components/home/Experience';
+import Blog from '../components/home/Blog';
 
 
 
@@ -26,6 +27,8 @@ export default function Home() {
           <Introduction />
 
           <Experience />
+
+          <Blog />
         </section>
 
         <Footer />
