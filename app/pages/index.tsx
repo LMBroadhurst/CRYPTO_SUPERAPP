@@ -3,8 +3,9 @@ import Head from 'next/head';
 import Header from '@/components/home/Header';
 import Introduction from '@/components/home/Introduction';
 import Footer from '@/components/home/Footer';
-import Experience from '@/components/home/Experience';
+import Experience from '@/components/home/Web2Experience';
 import Blog from '../components/home/Blog';
+import Audit from '@/components/home/Audit';
 
 
 
@@ -27,6 +28,8 @@ export default function Home() {
           <Introduction />
 
           <Experience />
+
+          <Audit />
 
           <Blog />
         </section>
