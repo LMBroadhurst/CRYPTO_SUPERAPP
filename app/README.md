@@ -11,3 +11,4 @@ with the UI.
 Of course for each device, phone/tablet/pc these values will scale up.
 
 VH... Started implementing VH in this project, just realised how people build websites with seemingly perfect dimensions per page.
+- This is actually not as fool proof as I thought, when I restart my project the vh trick fails...
