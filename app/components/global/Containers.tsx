@@ -17,9 +17,10 @@ const CenteredContainer: React.FC<CCOwnProps> = ({children, className}) => {
 type SCOwnProps = {
     children: React.ReactNode;
     vh: number;
+    isLeftToRight?: boolean;
 };
 
-const SectionContainer: React.FC<SCOwnProps> = ({children, vh}) => {
+const SectionContainer: React.FC<SCOwnProps> = ({children, vh, isLeftToRight}) => {
 
     return (
         <section className={`
@@ -27,7 +28,11 @@ const SectionContainer: React.FC<SCOwnProps> = ({children, vh}) => {
             border text-xl px-5
             sm:px-10 lg:w-[900px] lg:m-auto lg:gap-10 xl:w-[1150px] xl:gap-20
         `}>
-            <section className="flex flex-col justify-center items-center h-full gap-5 lg:flex-row-reverse lg:justify-between">
+            <section className={`
+                ${isLeftToRight ? 'flex-row' : 'flex-row-reverse'}
+                flex flex-col justify-center items-center h-full gap-5 
+                lg:flex-row-reverse lg:justify-between
+            `}>
                 {children}
             </section>
         </section>

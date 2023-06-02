@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Header from '@/components/home/Header';
 import Introduction from '@/components/home/Introduction';
 import Footer from '@/components/home/Footer';
-import Experience from '@/components/home/Web2Experience';
+import Web2Experience from '@/components/home/Web2Experience';
 import Blog from '../components/home/Blog';
 import Audit from '@/components/home/Audit';
 
@@ -27,7 +27,7 @@ export default function Home() {
         <section className='flex flex-col gap-24 lg:gap-24 xl:gap-36'>
           <Introduction />
 
-          <Experience />
+          <Web2Experience />
 
           <Audit />
 
