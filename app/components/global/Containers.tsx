@@ -16,7 +16,7 @@ const CenteredContainer: React.FC<CCOwnProps> = ({children, className}) => {
 
 type SCOwnProps = {
     children: React.ReactNode;
-    vh: number;
+    vh?: number;
     isLeftToRight?: boolean;
 };
 

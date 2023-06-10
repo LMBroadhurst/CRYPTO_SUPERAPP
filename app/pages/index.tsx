@@ -22,16 +22,8 @@ export default function Home() {
       <main className='text-white bg-gray-800 flex flex-col'>
         <Header />
 
-        {/* // Should create a custom container for each section to avoid repeating code :) */}
-
         <section className='flex flex-col gap-24 lg:gap-24 xl:gap-36'>
           <Introduction />
-
-          <Web2Experience />
-
-          <Audit />
-
-          <Blog />
         </section>
 
         <Footer />

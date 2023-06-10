@@ -5,7 +5,7 @@ const Header: React.FC = () => {
   
   
   return (
-    <header className='border text-2xl px-4 h-[15vh]'>
+    <header className='border text-2xl px-4 h-[100px]'>
       <section className='flex flex-row justify-between items-center h-full'>
 
         <h1>lewisbroadhurst.dev</h1>
@@ -17,10 +17,7 @@ const Header: React.FC = () => {
         <nav className='hidden lg:flex'>
           <ul className='flex flex-row items-center gap-8'>
               <li>Blog</li>
-              <li>Web3 Auditing</li>
-              <li>
-                  <button className='border bg-blue-600 border-blue-400 p-1 px-2 rounded'>Web3 App</button>
-              </li>
+              <li>Work With Me</li>
           </ul>
         </nav>
         
