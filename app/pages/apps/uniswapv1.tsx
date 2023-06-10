@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "@/components/apps/Header";
+import Header from "@/components/global/Header";
 import UniswapV1View from "@/components/apps/uniswapv1/UniswapV1View";
 import Footer from "@/components/home/Footer";
 
