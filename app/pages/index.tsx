@@ -1,12 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import Header from '@/components/home/Header';
 import Introduction from '@/components/home/Introduction';
-import Footer from '@/components/home/Footer';
-import Web2Experience from '@/components/home/Web2Experience';
-import Blog from '../components/home/Blog';
-import Audit from '@/components/home/Audit';
-
 
 
 export default function Home() {
