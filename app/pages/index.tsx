@@ -20,13 +20,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='text-white bg-gray-800 flex flex-col'>
-        <Header />
 
-        <section className='flex flex-col gap-24 lg:gap-24 xl:gap-36'>
-          <Introduction />
-        </section>
+        <Introduction />
 
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   )
