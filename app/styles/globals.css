@@ -2,14 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.basicOrangeHoverableIcon {
+    transition: all;
+    transition-duration: 500ms;
 }
 
-/* Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
+.basicOrangeHoverableIcon:hover {
+    color: rgb(249 115 22 / 1);
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.basicOrangeHoverableText {
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.basicOrangeHoverableText:hover {
+    color: rgb(249 115 22 / 1);
+    cursor: pointer;
+    translate: 5px;
 }
