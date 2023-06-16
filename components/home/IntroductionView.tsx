@@ -10,22 +10,36 @@ const HomeView: React.FC = () => {
 
 
     return (
-        <section className='mx-auto flex flex-row gap-20 xl:py-32 xl:h-screen xl:w-[1150px]'>
-            <section className='w-1/2 flex flex-col justify-between'>
-                <section className='flex flex-col gap-20'>
+        <section className='flex flex-col mx-auto sm:w-3/4 lg:flex-row lg:gap-20 xl:py-32 xl:h-screen xl:w-[1150px]'>
+            <section className='p-10 flex flex-col justify-between md:w-1/2'>
+                <section className='flex flex-col gap-8 lg:gap-20'>
                     <Header />
 
-                    {/* TODO: Create tabbing from the 3 items */}
-                    <Navigation />
+                    <Navigation
+                        activeTab={activeTab} 
+                    />
+
+                    <div className='lg:hidden'>
+                        <Socials />
+                    </div>
                 </section>
                 
-                <Socials />
+                <div className='hidden lg:block'>
+                    <Socials />
+                </div>
             </section>
 
+            <section className='... md:hidden'>
+                <AboutMe />
+                {/* Enter rest of 'Tabs' */}
+            </section>
 
-            {
-                activeTab === "AboutMe.tsx" && <AboutMe />
-            }
+            <section className='hidden md:flex'>
+                {
+                    activeTab === "AboutMe.tsx" && <AboutMe />
+                    // enter rest of active tabs, i.e. Blog & Content, Work With Me
+                }
+            </section>
         </section>
     )
 }
