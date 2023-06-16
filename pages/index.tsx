@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Introduction from '@/components/home/Introduction';
+import Introduction from '@/components/home/IntroductionView';
 
 
 export default function Home() {
