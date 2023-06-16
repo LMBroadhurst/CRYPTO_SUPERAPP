@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.basicOrangeHoverableIcon {
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.basicOrangeHoverableIcon:hover {
+    color: rgb(249 115 22 / 1);
+    cursor: pointer;
+    scale: 1.04;
+}
+
+.basicOrangeHoverableText {
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.basicOrangeHoverableText:hover {
+    color: rgb(249 115 22 / 1);
+    cursor: pointer;
+    translate: 5px;
+}

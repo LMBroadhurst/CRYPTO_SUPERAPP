@@ -39,3 +39,4 @@ next-env.d.ts
 
 # Web3
 *.pack
+node_modules
