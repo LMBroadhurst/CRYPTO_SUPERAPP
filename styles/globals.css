@@ -8,9 +8,9 @@
 }
 
 .basicOrangeHoverableIcon:hover {
-    color: rgb(249 115 22 / 1);
+    color: rgb(249 115 22);
     cursor: pointer;
-    scale: 1.04;
+    scale: 1.02;
 }
 
 .basicOrangeHoverableText {
@@ -19,7 +19,7 @@
 }
 
 .basicOrangeHoverableText:hover {
-    color: rgb(249 115 22 / 1);
+    color: rgb(249 115 22);
     cursor: pointer;
     translate: 5px;
 }
