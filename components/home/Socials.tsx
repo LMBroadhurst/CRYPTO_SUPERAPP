@@ -13,7 +13,11 @@ const Socials = () => {
     <section className='flex flex-row gap-1 text-3xl'>
       {
         socials.map(social => 
-          <a href={social.href} className='p-2 duration-200 transition-all hover:text-orange-400'>{social.icon}</a>
+          <a 
+            href={social.href} 
+            className='p-2 duration-200 transition-all hover:text-orange-400'
+            key={social.href}
+          >{social.icon}</a>
         )
       }
     </section>

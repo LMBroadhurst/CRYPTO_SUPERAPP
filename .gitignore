@@ -8,15 +8,14 @@
 *package-lock.json
 
 # next.js & production
-*/.next/*
-**/.next/**
 *.json
 */out/
 */build
-*/next
+*next
 */.next
 */.vscode
 *.pack.*
+*/webpack/*
 
 # misc
 *.DS_Store
