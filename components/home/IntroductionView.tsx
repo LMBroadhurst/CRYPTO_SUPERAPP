@@ -17,9 +17,10 @@ const HomeView: React.FC = () => {
 
 
     return (
-        <section className='flex flex-col mx-auto sm:w-3/4 lg:flex-row lg:w-[900px] lg:gap-20 lg:py-32 lg:h-screen xl:w-[1150px]'>
+        <section className='flex flex-col mx-auto sm:w-3/4 lg:flex-row lg:w-[900px] lg:gap-20 lg:py-32 xl:w-[1150px]'>
             
-            <section className='flex flex-col justify-between p-10 sm:py-32 lg:p-0 lg:w-1/2'>
+            {/* Need this fixed whilst other half scrolls */}
+            <section className='flex flex-col justify-between p-10 py-32 lg:p-0 lg:w-1/2 lg:h-[700px]'>
                 
                 <section className='flex flex-col gap-8 lg:gap-20'>
                     <Header />

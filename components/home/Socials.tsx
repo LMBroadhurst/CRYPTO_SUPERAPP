@@ -1,11 +1,12 @@
 import React from 'react';
-import { GithubOutlined, LinkedinFilled, YoutubeFilled } from '@ant-design/icons';
+import { GithubOutlined, LinkedinFilled, MediumSquareFilled, YoutubeFilled } from '@ant-design/icons';
 import { SocialItem } from '@/types/HomeTypes';
 
 const socials: SocialItem[] = [
   {icon: <LinkedinFilled />, href: 'https://www.linkedin.com/in/lewis-broadhurst/'},
   {icon: <GithubOutlined />, href: 'https://github.com/LMBroadhurst'},
-  {icon: <YoutubeFilled />, href: 'https://www.youtube.com/channel/UCv8iDXiyBoaNRtPmFt-fOYw'}
+  {icon: <YoutubeFilled />, href: 'https://www.youtube.com/channel/UCv8iDXiyBoaNRtPmFt-fOYw'},
+  {icon: <MediumSquareFilled />, href: 'https://medium.com/@lewis1broadhurst'}
 ]
 
 const Socials = () => {
