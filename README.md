@@ -5,6 +5,11 @@ After looking at many different website design patterns, I have decided to go wi
 
 First time experience is really key. Want that to be a great experience that leaves people wanting more.
 
+#### Colour Scheme
+https://tailwindcss.com/docs/customizing-colors
+
+Primary: orange, accent: sky, text & background: slate.
+
 ### Notes from UX/UI Udemy Course:
 - Making product easy to navigate is key
 - What is the exact goal of each thing I am placing on the screen
