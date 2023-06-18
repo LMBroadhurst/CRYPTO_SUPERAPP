@@ -1,6 +1,19 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const YoutubePreview = () => {
+type OwnProps = {
+  title: string;
+  description: string;
+  image: string;
+  date: string;
+}
+
+const YoutubePreview: FC<OwnProps> = ({
+  title,
+  description,
+  image,
+  date
+}) => {
+  
   return (
     <div>YoutubePreview</div>
   )
