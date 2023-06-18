@@ -5,23 +5,25 @@ After looking at many different website design patterns, I have decided to go wi
 
 First time experience is really key. Want that to be a great experience that leaves people wanting more.
 
-Notes from UX/UI Udemy Course:
+#### Colour Scheme
+https://tailwindcss.com/docs/customizing-colors
+
+Primary: orange, accent: sky, text & background: slate.
+
+### Notes from UX/UI Udemy Course:
 - Making product easy to navigate is key
 - What is the exact goal of each thing I am placing on the screen
 - Keep consistent patterns for navigation and interactions
 - Grids are powerful, can provide great way of approaching design
 
+### Refactoring UI/Tailwind CSS resources
+
+Instead of reusing several of the exact same utility classes, we can use an array and map it, reducing code required for implementation.
+
+#### labels-are-a-last-resort
+#### building-your-color-palette
+
 ### Experimentation
-
-Within a page, all 'sections' must be seperated only by the gap setting on the parent container.
-This will avoid mismatched padding/margins between each section e.g. p-10 & p-12.
-Extra customisation can take place within the container.
-
-The customisation within the container must be less than what the gap setting is on the parent.
-This is to ensure each section is clearly associated with the correct elements, avoiding confusion
-with the UI.
-
-Of course for each device, phone/tablet/pc these values will scale up.
 
 VH... Started implementing VH in this project, just realised how people build websites with seemingly perfect dimensions per page.
 - This is actually not as fool proof as I thought, when I restart my project the vh trick fails...

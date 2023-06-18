@@ -3,22 +3,32 @@ import Navigation from './Navigation';
 import Socials from './Socials';
 import AboutMe from './AboutMe';
 import Header from './Header';
+import PublishedContent from './PublishedContent';
+import WorkWithMe from './WorkWithMe';
 
 const HomeView: React.FC = () => {
 
-    const [activeTab, setActiveTab] = useState<string>("AboutMe.tsx");
+    const [activeTabKey, setActiveTabKey] = useState<string>("AboutMe.tsx");
+
+    const handleTabChange = (e: any) => {
+        console.log(e.target.id);
+        setActiveTabKey(e.target.id);
+    };
 
 
     return (
-        <section className='flex flex-col mx-auto sm:w-3/4 lg:flex-row lg:gap-20 xl:py-32 xl:h-screen xl:w-[1150px]'>
-            <section className='p-10 flex flex-col justify-between md:w-1/2'>
+        <section className='flex flex-col mx-auto sm:w-3/4 lg:flex-row lg:w-[900px] lg:gap-20 lg:py-32 lg:h-screen xl:w-[1150px]'>
+            
+            <section className='flex flex-col justify-between p-10 sm:py-32 lg:p-0 lg:w-1/2'>
+                
                 <section className='flex flex-col gap-8 lg:gap-20'>
                     <Header />
 
                     <Navigation
-                        activeTab={activeTab} 
+                        activeTabKey={activeTabKey} 
+                        handleTabChange={handleTabChange}
                     />
-
+                    
                     <div className='lg:hidden'>
                         <Socials />
                     </div>
@@ -29,15 +39,21 @@ const HomeView: React.FC = () => {
                 </div>
             </section>
 
-            <section className='... md:hidden'>
+            <section className='flex flex-col gap-10 lg:hidden'>
                 <AboutMe />
-                {/* Enter rest of 'Tabs' */}
+
+                <PublishedContent />
+
+                <WorkWithMe />
             </section>
 
-            <section className='hidden md:flex'>
+            <section className='hidden lg:flex lg:w-1/2'>
                 {
-                    activeTab === "AboutMe.tsx" && <AboutMe />
-                    // enter rest of active tabs, i.e. Blog & Content, Work With Me
+                    activeTabKey === "AboutMe.tsx" && <AboutMe /> 
+                    || 
+                    activeTabKey === "PublishedContent.tsx" && <PublishedContent /> 
+                    ||
+                    activeTabKey === "WorkWithMe.tsx" && <WorkWithMe />
                 }
             </section>
         </section>
