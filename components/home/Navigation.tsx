@@ -6,7 +6,7 @@ type OwnProps = {
 
 const Navigation: FC<OwnProps> = () => {
   return (
-    <nav className='hidden md:block'>
+    <nav className='hidden lg:flex'>
         <ul className='flex flex-col gap-2 text-xl items-start'>
             <li className='basicOrangeHoverableText text-orange-400'>About Me</li>
             <li className='basicOrangeHoverableText'>Blog & Content</li>

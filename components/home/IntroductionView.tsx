@@ -10,15 +10,17 @@ const HomeView: React.FC = () => {
 
 
     return (
-        <section className='flex flex-col mx-auto sm:w-3/4 lg:flex-row lg:gap-20 xl:py-32 xl:h-screen xl:w-[1150px]'>
-            <section className='p-10 flex flex-col justify-between md:w-1/2'>
+        <section className='flex flex-col mx-auto sm:w-3/4 lg:flex-row lg:w-[900px] lg:gap-20 lg:py-32 lg:h-screen xl:w-[1150px]'>
+            
+            <section className='flex flex-col justify-between p-10 sm:py-32 lg:p-0 lg:w-1/2'>
+                
                 <section className='flex flex-col gap-8 lg:gap-20'>
                     <Header />
 
                     <Navigation
                         activeTab={activeTab} 
                     />
-
+                    
                     <div className='lg:hidden'>
                         <Socials />
                     </div>
@@ -29,12 +31,11 @@ const HomeView: React.FC = () => {
                 </div>
             </section>
 
-            <section className='... md:hidden'>
+            <section className='... lg:hidden'>
                 <AboutMe />
-                {/* Enter rest of 'Tabs' */}
             </section>
 
-            <section className='hidden md:flex'>
+            <section className='hidden lg:flex lg:w-1/2'>
                 {
                     activeTab === "AboutMe.tsx" && <AboutMe />
                     // enter rest of active tabs, i.e. Blog & Content, Work With Me
