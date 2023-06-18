@@ -12,14 +12,3 @@
     cursor: pointer;
     scale: 1.02;
 }
-
-.basicOrangeHoverableText {
-    transition: all;
-    transition-duration: 500ms;
-}
-
-.basicOrangeHoverableText:hover {
-    color: rgb(249 115 22);
-    cursor: pointer;
-    translate: 5px;
-}

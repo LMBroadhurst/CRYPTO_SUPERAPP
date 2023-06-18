@@ -12,7 +12,7 @@ const Header = () => {
             > MahiMarkets</a>
         </h2>
 
-        <h3 className='text-md text-slate-400 w-2/3 sm:4/5'>I build full stack websites/apps that create revenue for businesses and provide great experiences for users.</h3>
+        <h3 className='text-md text-slate-400 w-2/3 sm:4/5'>I build full stack websites/apps that generate revenue for businesses and provide great experiences for users.</h3>
     </section>
   )
 }

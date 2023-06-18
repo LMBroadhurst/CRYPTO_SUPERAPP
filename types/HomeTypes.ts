@@ -3,6 +3,12 @@ type SocialItem = {
     icon: React.JSX.Element;
 }
 
+type NavigationTab = {
+    text: string;
+    key: string;
+}
+
 export {
-    type SocialItem
+    type SocialItem,
+    type NavigationTab
 };

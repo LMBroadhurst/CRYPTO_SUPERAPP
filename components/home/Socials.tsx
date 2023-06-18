@@ -10,10 +10,10 @@ const socials: SocialItem[] = [
 
 const Socials = () => {
   return (
-    <section className='flex flex-row gap-4 text-3xl'>
+    <section className='flex flex-row gap-1 text-3xl'>
       {
         socials.map(social => 
-          <a href={social.href} className='basicOrangeHoverableIcon'>{social.icon}</a>
+          <a href={social.href} className='p-2 duration-200 transition-all hover:text-orange-400'>{social.icon}</a>
         )
       }
     </section>

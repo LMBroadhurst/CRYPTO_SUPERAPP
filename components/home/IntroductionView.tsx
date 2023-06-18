@@ -3,10 +3,17 @@ import Navigation from './Navigation';
 import Socials from './Socials';
 import AboutMe from './AboutMe';
 import Header from './Header';
+import PublishedContent from './PublishedContent';
+import WorkWithMe from './WorkWithMe';
 
 const HomeView: React.FC = () => {
 
-    const [activeTab, setActiveTab] = useState<string>("AboutMe.tsx");
+    const [activeTabKey, setActiveTabKey] = useState<string>("AboutMe.tsx");
+
+    const handleTabChange = (e: any) => {
+        console.log(e.target.id);
+        setActiveTabKey(e.target.id);
+    };
 
 
     return (
@@ -18,7 +25,8 @@ const HomeView: React.FC = () => {
                     <Header />
 
                     <Navigation
-                        activeTab={activeTab} 
+                        activeTabKey={activeTabKey} 
+                        handleTabChange={handleTabChange}
                     />
                     
                     <div className='lg:hidden'>
@@ -31,14 +39,21 @@ const HomeView: React.FC = () => {
                 </div>
             </section>
 
-            <section className='... lg:hidden'>
+            <section className='flex flex-col gap-10 lg:hidden'>
                 <AboutMe />
+
+                <PublishedContent />
+
+                <WorkWithMe />
             </section>
 
             <section className='hidden lg:flex lg:w-1/2'>
                 {
-                    activeTab === "AboutMe.tsx" && <AboutMe />
-                    // enter rest of active tabs, i.e. Blog & Content, Work With Me
+                    activeTabKey === "AboutMe.tsx" && <AboutMe /> 
+                    || 
+                    activeTabKey === "PublishedContent.tsx" && <PublishedContent /> 
+                    ||
+                    activeTabKey === "WorkWithMe.tsx" && <WorkWithMe />
                 }
             </section>
         </section>

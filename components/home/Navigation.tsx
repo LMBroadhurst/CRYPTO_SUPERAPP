@@ -1,22 +1,37 @@
+import { NavigationTab } from '@/types/HomeTypes';
 import React, { FC } from 'react';
 
 type OwnProps = {
-    activeTab: string;
+  activeTabKey: string;
+  handleTabChange: any;
 };
 
-const listItems: string[] = ['About Me', 'Published Content', 'Work With Me'];
+const navTabs: NavigationTab[] = [
+  {text: 'About Me', key: 'AboutMe.tsx'}, 
+  {text: 'Published Content', key: 'PublishedContent.tsx'}, 
+  {text:'Work With Me', key: 'WorkWithMe.tsx'}
+];
 
-const Navigation: FC<OwnProps> = () => {
-  
+const Navigation: FC<OwnProps> = ({
+  activeTabKey,
+  handleTabChange
+}) => {
+
   return (
     <nav className='hidden lg:flex'>
         <ul className='flex flex-col gap-2 text-xl items-start'>
           {
-            listItems.map(listItem => 
+            navTabs.map(navTab => 
               <li 
-                className='duration-200 transition-all hover:text-orange-300 hover:cursor-pointer'
+                className={`
+                  duration-200 transition-all hover:text-orange-600 hover:cursor-pointer hover:translate-x-0.5
+                  ${ activeTabKey === navTab.key && 'text-orange-500 translate-x-1'}
+                `}
+                id={navTab.key}
+                key={navTab.key}
+                onClick={handleTabChange}
               >
-                {listItem}
+                {navTab.text}
               </li>
             )
           }
