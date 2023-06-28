@@ -4,54 +4,54 @@ import YoutubePreview from './YoutubePreview'
 
 import PREVIEW from './assets/UNISWAPP2.webp';
 
-const publishedContent = [
+const publishedContentPreview = [
   {
     type: 'BLOG',
     title: 'Uniswap V2: The Power of the AMM',
     description: 'Part 2 of an exploration into Uniswap, a powerhouse of DeFi. In this article I explore the Governance and liqudity aspects of the protocol.',
     date: 'May 26th 2023',
-    image: PREVIEW.src
+    image: PREVIEW
   },
   {
     type: 'BLOG',
     title: 'Uniswap V2: The Power of the AMM',
     description: '',
     date: '',
-    image: ''
+    image: PREVIEW
   },
   {
     type: 'BLOG',
     title: 'Uniswap V2: The Power of the AMM',
     description: '',
     date: '',
-    image: ''
+    image: PREVIEW
   },
   {
     type: 'YOUTUBE',
     title: 'Uniswap V2: The Power of the AMM',
     description: '',
     date: '',
-    image: ''
+    image: PREVIEW
   },
   {
     type: 'YOUTUBE',
     title: 'Uniswap V2: The Power of the AMM',
     description: '',
     date: '',
-    image: ''
+    image: PREVIEW
   },
 ]
 
 const PublishedContent = () => {
 
-  const contentToRender = publishedContent.map(pc => {
+  const contentToRender = publishedContentPreview.map(pc => {
     
     if (pc.type === 'YOUTUBE') {
       return (
         <YoutubePreview 
           title={pc.title}
           description={pc.description}
-          image={pc.image}
+          image={pc?.image}
           date={pc.date}
         />
       )
@@ -61,7 +61,7 @@ const PublishedContent = () => {
       <BlogPreview
         title={pc.title}
         description={pc.description}
-        image={pc.image}
+        image={pc?.image}
         date={pc.date}
       />
     )

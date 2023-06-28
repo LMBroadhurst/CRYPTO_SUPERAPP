@@ -1,9 +1,10 @@
+import { StaticImageData } from 'next/image';
 import React, { FC } from 'react'
 
 type OwnProps = {
   title: string;
   description: string;
-  image: string;
+  image: StaticImageData;
   date: string;
 }
 
