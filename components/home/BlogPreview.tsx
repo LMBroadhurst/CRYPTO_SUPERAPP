@@ -21,7 +21,7 @@ const BlogPreview: FC<OwnProps> = ({
             className='flex flex-row justify-between items-center gap-8 rounded-lg bg-slate-800 p-6 shadow-md shadow-teal-400 
                 transition-all duration-1000 hover:shadow-purple-400 hover:cursor-pointer hover:-translate-x-1'
         >
-            <section className='flex flex-col gap-4 md:w-7/12'>
+            <section className='flex flex-col gap-4'>
                 <h3 className='text-lg sm:text-xl text-slate-200'>{title}</h3>
 
                 <p className='text-slate-500'>{description}</p>
@@ -29,17 +29,17 @@ const BlogPreview: FC<OwnProps> = ({
                 <img 
                     src={image.src} 
                     alt=''
-                    className='rounded-md sm:hidden'
+                    className='rounded-md'
                 />
 
                 <span className='text-sm text-slate-500'>{date}</span>
             </section>
 
-            <img 
+            {/* <img 
                 src={image.src} 
                 alt='' 
-                className='hidden sm:flex w-5/12 rounded-md'
-            />
+                className='hidden w-5/12 rounded-md xl:flex'
+            /> */}
         </section>
     </section>
   )

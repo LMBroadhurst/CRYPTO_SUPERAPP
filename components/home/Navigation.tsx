@@ -9,7 +9,8 @@ type OwnProps = {
 const navTabs: NavigationTab[] = [
   {text: 'About Me', key: 'AboutMe.tsx'}, 
   {text: 'Published Content', key: 'PublishedContent.tsx'}, 
-  {text:'Work With Me', key: 'WorkWithMe.tsx'}
+  {text: 'Work With Me', key: 'WorkWithMe.tsx'},
+  {text: 'Feedback', key: 'Feedback.tsx'}
 ];
 
 const Navigation: FC<OwnProps> = ({

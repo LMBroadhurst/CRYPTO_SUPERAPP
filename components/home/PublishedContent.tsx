@@ -2,7 +2,9 @@ import React from 'react'
 import BlogPreview from './BlogPreview'
 import YoutubePreview from './YoutubePreview'
 
-import PREVIEW from './assets/UNISWAPP2.webp';
+import UNISWAPP1 from './assets/UNISWAP1.webp'
+import UNISWAPP2 from './assets/UNISWAPP2.webp';
+import ERC20 from './assets/ERC20.webp';
 
 const publishedContentPreview = [
   {
@@ -10,35 +12,35 @@ const publishedContentPreview = [
     title: 'Uniswap V2: The Power of the AMM',
     description: 'Part 2 of an exploration into Uniswap, a powerhouse of DeFi. In this article I explore the Governance and liqudity aspects of the protocol.',
     date: 'May 26th 2023',
-    image: PREVIEW
+    image: UNISWAPP2
   },
   {
     type: 'BLOG',
     title: 'Uniswap V2: The Power of the AMM',
-    description: '',
-    date: '',
-    image: PREVIEW
+    description: 'Part 1 of an exploration into Uniswap, specifically focusing on the mechanics of how AMMs/DEXs work. Great introduction into DeFi and the benefits of DeFi for anyone new to the space.',
+    date: 'May 19th 2023',
+    image: UNISWAPP1
   },
   {
     type: 'BLOG',
-    title: 'Uniswap V2: The Power of the AMM',
+    title: 'ERC20: What & Why?',
     description: '',
-    date: '',
-    image: PREVIEW
+    date: 'May 12th 2023',
+    image: ERC20
   },
   {
     type: 'YOUTUBE',
     title: 'Uniswap V2: The Power of the AMM',
     description: '',
     date: '',
-    image: PREVIEW
+    image: UNISWAPP1
   },
   {
     type: 'YOUTUBE',
     title: 'Uniswap V2: The Power of the AMM',
     description: '',
     date: '',
-    image: PREVIEW
+    image: UNISWAPP1
   },
 ]
 
@@ -78,7 +80,7 @@ const PublishedContent = () => {
 
             <p className='text-slate-400 xl:text-lg'>Check out some of my blogs and YouTube videos below.</p>
 
-            <section className='flex flex-col gap-5 my-10'>
+            <section className='flex flex-col gap-5'>
               {contentToRender}
             </section>
         </section>  

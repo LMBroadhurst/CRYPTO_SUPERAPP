@@ -18,6 +18,7 @@ const Socials = () => {
             href={social.href} 
             className='p-2 duration-200 transition-all hover:text-orange-400'
             key={social.href}
+            target='_blank'
           >{social.icon}</a>
         )
       }
