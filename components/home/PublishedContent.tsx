@@ -10,7 +10,7 @@ const publishedContentPreview = [
   {
     type: 'BLOG',
     title: 'Uniswap V2: The Power of the AMM',
-    description: 'Part 2 of an exploration into Uniswap, a powerhouse of DeFi. In this article I explore the Governance and liqudity aspects of the protocol.',
+    description: 'Part 2 of an exploration into Uniswap, a powerhouse of DeFi. In this article I explore the Governance and liquidity aspects of the protocol.',
     date: 'May 26th 2023',
     image: UNISWAPP2
   },
@@ -24,24 +24,10 @@ const publishedContentPreview = [
   {
     type: 'BLOG',
     title: 'ERC20: What & Why?',
-    description: '',
+    description: 'A dive into the history of ERC20 tokens, how they came into existence, what they acheive, and why they are an important standard in the crypto space.',
     date: 'May 12th 2023',
     image: ERC20
-  },
-  {
-    type: 'YOUTUBE',
-    title: 'Uniswap V2: The Power of the AMM',
-    description: '',
-    date: '',
-    image: UNISWAPP1
-  },
-  {
-    type: 'YOUTUBE',
-    title: 'Uniswap V2: The Power of the AMM',
-    description: '',
-    date: '',
-    image: UNISWAPP1
-  },
+  }
 ]
 
 const PublishedContent = () => {

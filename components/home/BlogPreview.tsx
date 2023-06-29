@@ -18,8 +18,8 @@ const BlogPreview: FC<OwnProps> = ({
   return (
     <section className='self-stretch'>
         <section 
-            className='flex flex-row justify-between items-center gap-8 rounded-lg bg-slate-800 p-6 shadow-md shadow-teal-400 
-                transition-all duration-1000 hover:shadow-purple-400 hover:cursor-pointer hover:-translate-x-1'
+            className='flex flex-row justify-between items-center gap-8 rounded-lg bg-slate-800 p-6
+                transition-all duration-500 shadow-md hover:shadow-sky-300 hover:cursor-pointer'
         >
             <section className='flex flex-col gap-4'>
                 <h3 className='text-lg sm:text-xl text-slate-200'>{title}</h3>
@@ -34,12 +34,6 @@ const BlogPreview: FC<OwnProps> = ({
 
                 <span className='text-sm text-slate-500'>{date}</span>
             </section>
-
-            {/* <img 
-                src={image.src} 
-                alt='' 
-                className='hidden w-5/12 rounded-md xl:flex'
-            /> */}
         </section>
     </section>
   )

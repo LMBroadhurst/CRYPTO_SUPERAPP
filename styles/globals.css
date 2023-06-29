@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.basicOrangeHoverableIcon {
-    transition: all;
-    transition-duration: 500ms;
-}
-
-.basicOrangeHoverableIcon:hover {
-    color: rgb(249 115 22);
-    cursor: pointer;
-    scale: 1.02;
-}
+/* .shadow1 {
+    box-shadow: #2dd4bf 0px 2px 8px;
+} */
