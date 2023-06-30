@@ -18,8 +18,8 @@ const BlogPreview: FC<OwnProps> = ({
   return (
     <section className='self-stretch'>
         <section 
-            className='flex flex-row justify-between items-center gap-8 rounded-lg bg-slate-800 p-6
-                transition-all duration-500 shadow-md hover:shadow-sky-300 hover:cursor-pointer'
+            className='flex flex-row justify-between items-center gap-8 rounded-lg p-4 transition-all duration-500 
+                hover:bg-blue-400 hover:bg-opacity-10 hover:cursor-pointer'
         >
             <section className='flex flex-col gap-4'>
                 <h3 className='text-lg sm:text-xl text-slate-200'>{title}</h3>
@@ -32,6 +32,7 @@ const BlogPreview: FC<OwnProps> = ({
                     className='rounded-md'
                 />
 
+                {/* TODO: Add some chips in here? */}
                 <span className='text-sm text-slate-500'>{date}</span>
             </section>
         </section>
