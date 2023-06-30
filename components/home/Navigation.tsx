@@ -27,10 +27,11 @@ const Navigation: FC<OwnProps> = ({
                 className={`
                   duration-200 transition-all hover:text-orange-600 hover:cursor-pointer hover:translate-x-0.5
                   ${ activeTabKey === navTab.key && 'text-orange-500 translate-x-1'}
+                  ${ navTab.key === 'Feedback.tsx' && 'hover:cursor-not-allowed'}
                 `}
                 id={navTab.key}
                 key={navTab.key}
-                onClick={handleTabChange}
+                onClick={navTab.key !== 'Feedback.tsx' ? handleTabChange : null}
               >
                 {navTab.text}
               </li>

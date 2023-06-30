@@ -5,6 +5,7 @@ import AboutMe from './AboutMe';
 import Header from './Header';
 import PublishedContent from './PublishedContent';
 import WorkWithMe from './WorkWithMe';
+import Feedback from './Feedback';
 
 const HomeView: React.FC = () => {
 
@@ -55,6 +56,8 @@ const HomeView: React.FC = () => {
                     activeTabKey === "PublishedContent.tsx" && <PublishedContent /> 
                     ||
                     activeTabKey === "WorkWithMe.tsx" && <WorkWithMe />
+                    ||
+                    activeTabKey === "Feedback.tsx" && <Feedback />
                 }
             </section>
         </section>

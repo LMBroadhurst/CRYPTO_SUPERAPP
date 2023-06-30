@@ -37,6 +37,7 @@ const PublishedContent = () => {
     if (pc.type === 'YOUTUBE') {
       return (
         <YoutubePreview 
+          key={pc.date}
           title={pc.title}
           description={pc.description}
           image={pc?.image}
@@ -47,6 +48,7 @@ const PublishedContent = () => {
 
     return (
       <BlogPreview
+        key={pc.date}
         title={pc.title}
         description={pc.description}
         image={pc?.image}

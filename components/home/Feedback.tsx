@@ -2,13 +2,11 @@ import React, { FC } from 'react';
 
 type OwnProps = {};
 
-const Navigation: FC<OwnProps> = () => {
+const Feedback: FC<OwnProps> = () => {
 
   return (
-    <section>
-
-    </section>
+    <section>Coming soon!</section>
   )
 }
 
-export default Navigation
+export default Feedback;
