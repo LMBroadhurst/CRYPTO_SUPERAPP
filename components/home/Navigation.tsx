@@ -26,7 +26,7 @@ const Navigation: FC<OwnProps> = ({
               <li 
                 className={`
                    duration-200 transition-all hover:text-orange-600 hover:cursor-pointer hover:translate-x-0.5
-                  ${ activeTabKey === navTab.key && 'text-orange-500 translate-x-1'}
+                  ${ activeTabKey === navTab.key && 'text-orange-500 translate-x-1 font-medium'}
                   ${ navTab.key === 'Feedback.tsx' && 'hover:cursor-not-allowed'}
                 `}
                 id={navTab.key}

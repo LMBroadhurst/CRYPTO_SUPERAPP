@@ -4,7 +4,7 @@ const AboutMe = () => {
   return (
     <section className='flex p-10 lg:p-0 lg:w-full'>
         <section className='flex flex-col gap-5'>
-            <h2 className='text-3xl self-start'>About Me</h2>
+            <h2 className='text-3xl self-start font-medium'>About Me</h2>
 
             <section className='flex flex-col gap-5 text-slate-500'>
               <p>After looking at a change of career into something I would truly enjoy doing daily, I began to get interested in the idea of software engineering. The idea of gaining the ability to <span className='text-slate-200'>build functional programs</span>, <span className='text-slate-200'>experiment with new ideas</span>, and <span className='text-slate-200'>learn more about the world of tech</span> convinced me to give it a shot.</p>
