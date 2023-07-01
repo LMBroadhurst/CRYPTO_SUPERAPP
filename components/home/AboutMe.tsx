@@ -4,7 +4,7 @@ const AboutMe = () => {
   return (
     <section className='flex p-10 lg:p-0 lg:w-full'>
         <section className='flex flex-col gap-2'>
-            <h2 className='text-2xl self-start font-medium'>About Me</h2>
+            <h2 className='text-2xl self-start'>About Me</h2>
 
             <section className='flex flex-col gap-5 text-slate-500 text-justify'>
               <p>After looking at a change of career into something I would truly enjoy doing daily, I began to get interested in the idea of software engineering. The idea of gaining the ability to <span className='text-slate-200'>build functional programs</span>, <span className='text-slate-200'>experiment with new ideas</span>, and <span className='text-slate-200'>learn more about the world of tech</span> convinced me to give it a shot.</p>
@@ -13,7 +13,7 @@ const AboutMe = () => {
 
               <p>Since then, I have proudly been <span className='text-slate-200'>employed as a Full Stack Engineer</span> for a large UK retail bank, and currently work for an innovative FX focused fintech company.</p>
 
-              <p><span className='text-slate-200'>Outside of work</span>, I spend my time trying out new languages and programming paradigms, blogging about Web3, lifting weights in a gym that needs far better AC, and roaming around London.</p>
+              <p><span className='text-slate-200'>Outside of work</span>, I spend my time trying out new languages and programming paradigms, blogging about Web3, lifting weights in a gym that needs far better AC, and roaming around <span className='text-slate-200'>London, UK</span>.</p>
             </section>
             
             {/* TODO: Build some components for displaying tech related experience */}

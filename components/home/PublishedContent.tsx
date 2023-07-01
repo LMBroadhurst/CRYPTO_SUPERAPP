@@ -5,9 +5,11 @@ import YoutubePreview from './YoutubePreview'
 import UNISWAPP1 from './assets/UNISWAP1.webp'
 import UNISWAPP2 from './assets/UNISWAPP2.webp';
 import ERC20 from './assets/ERC20.webp';
+import { ContentObject } from '@/types/HomeTypes';
 
-const publishedContentPreview = [
+const publishedContentPreview: ContentObject[] = [
   {
+    url: 'https://medium.com/block-magnates/uniswap-v2-the-power-of-the-amm-b53bb60450be', 
     type: 'BLOG',
     title: 'Uniswap V2: The Power of the AMM',
     description: 'Part 2 of an exploration into Uniswap, a powerhouse of DeFi. In this article I explore the Governance and liquidity aspects of the protocol.',
@@ -15,6 +17,7 @@ const publishedContentPreview = [
     image: UNISWAPP2
   },
   {
+    url: 'https://medium.com/block-magnates/uniswap-v2-the-power-of-the-amm-e565bd3f3ac1',
     type: 'BLOG',
     title: 'Uniswap V2: The Power of the AMM',
     description: 'Part 1 of an exploration into Uniswap, specifically focusing on the mechanics of how AMMs/DEXs work. Great introduction into DeFi and the benefits of DeFi for anyone new to the space.',
@@ -22,6 +25,7 @@ const publishedContentPreview = [
     image: UNISWAPP1
   },
   {
+    url: 'https://medium.com/@lewis1broadhurst/erc20-what-why-5b300dff5aa6',
     type: 'BLOG',
     title: 'ERC20: What & Why?',
     description: 'A dive into the history of ERC20 tokens, how they came into existence, what they acheive, and why they are an important standard in the crypto space.',
@@ -49,6 +53,7 @@ const PublishedContent = () => {
     return (
       <BlogPreview
         key={pc.date}
+        url={pc.url}
         title={pc.title}
         description={pc.description}
         image={pc?.image}
@@ -60,8 +65,8 @@ const PublishedContent = () => {
 
 
   return (
-    <section className='flex flex-col gap-10 text-justify lg:p-0 lg:w-full'>
-        <section className='flex flex-col gap-2 lg:px-4'>
+    <section className='flex flex-col gap-10 text-justify p-10 lg:p-0 lg:w-full'>
+        <section className='flex flex-col gap-2'>
             <h2 className='text-2xl self-start'>Content</h2>
 
             <section className='flex flex-col gap-5'>
@@ -71,7 +76,8 @@ const PublishedContent = () => {
 
               <p className='text-slate-500'>Check out my&nbsp;
                 <a 
-                  href="/blog"
+                  href="https://medium.com/@lewis1broadhurst"
+                  target='_blank'
                   className='text-orange-400'
                 >
                   Blog

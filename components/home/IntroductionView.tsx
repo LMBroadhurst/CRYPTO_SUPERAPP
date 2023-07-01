@@ -44,9 +44,11 @@ const HomeView: React.FC = () => {
             <section className='flex flex-col gap-10 lg:hidden'>
                 <AboutMe />
 
+                <WorkWithMe />
+
                 <PublishedContent />
 
-                <WorkWithMe />
+                <Feedback />
             </section>
 
             <section className='hidden lg:flex lg:w-1/2'>
