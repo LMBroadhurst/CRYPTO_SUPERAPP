@@ -1,17 +1,18 @@
 import React from 'react';
-import { GithubOutlined, LinkedinFilled, MediumSquareFilled, YoutubeFilled } from '@ant-design/icons';
+import { GithubOutlined, LinkedinFilled, MediumSquareFilled, YoutubeFilled, MailFilled } from '@ant-design/icons';
 import { SocialItem } from '@/types/HomeTypes';
 
 const socials: SocialItem[] = [
   {icon: <LinkedinFilled />, href: 'https://www.linkedin.com/in/lewis-broadhurst/'},
   {icon: <GithubOutlined />, href: 'https://github.com/LMBroadhurst'},
   {icon: <YoutubeFilled />, href: 'https://www.youtube.com/channel/UCv8iDXiyBoaNRtPmFt-fOYw'},
-  {icon: <MediumSquareFilled />, href: 'https://medium.com/@lewis1broadhurst'}
+  {icon: <MediumSquareFilled />, href: 'https://medium.com/@lewis1broadhurst'},
+  {icon: <MailFilled />, href: 'mailto:lewis1broadhurst@gmail.com'}
 ]
 
 const Socials = () => {
   return (
-    <section className='flex flex-row gap-1 text-3xl'>
+    <section className='flex flex-row gap-1 text-3xl text-slate-400'>
       {
         socials.map(social => 
           <a 
