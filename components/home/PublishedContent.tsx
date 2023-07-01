@@ -69,7 +69,15 @@ const PublishedContent = () => {
               
               <p className='text-slate-500'>I've found it to be a great learning experience for my own development, and hopefully has allowed others to gain understanding of the topics I have covered.</p>
 
-              <p className='text-slate-500'>Check out some of my blogs and YouTube videos below.</p>
+              <p className='text-slate-500'>Check out my&nbsp;
+                <a 
+                  href="/blog"
+                  className='text-orange-400'
+                >
+                  Blog
+                </a> 
+                &nbsp;and YouTube videos below.
+              </p>
             </section>
         </section>  
         <section className='flex flex-col gap-5'>

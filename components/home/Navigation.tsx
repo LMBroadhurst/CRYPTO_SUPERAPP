@@ -20,7 +20,7 @@ const Navigation: FC<OwnProps> = ({
 
   return (
     <nav className='hidden lg:flex'>
-        <ul className='flex flex-col gap-2 text-xl items-start text-slate-500'>
+        <ul className='flex flex-col gap-2 text-lg items-start text-slate-500'>
           {
             navTabs.map(navTab => 
               <li 
