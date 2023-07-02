@@ -25,9 +25,9 @@ const BlogPreview: FC<OwnProps> = ({
     >
         <section 
             className='
-                flex flex-row justify-between items-center gap-8 rounded-lg p-4 
-                transition-all duration-500 bg-blue-400 bg-opacity-10 shadow-md shadow-sky-700
-                hover:cursor-pointer hover:shadow-sky-400'
+                flex flex-row justify-between items-center gap-8 rounded-lg p-4 bg-blue-700
+                transition-all duration-500 bg-opacity-10 shadow-md shadow-sky-700
+                hover:cursor-pointer hover:shadow-sky-400 hover:bg-gray-900'
         >
             <section className='flex flex-col gap-4'>
                 <h3 className='text-lg sm:text-xl text-slate-200'>{title}</h3>
