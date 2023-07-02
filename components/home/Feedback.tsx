@@ -9,7 +9,7 @@ const Feedback: FC<OwnProps> = () => {
       <section className='flex flex-col gap-2 p-10 lg:p-0'>
         <h2 className='text-2xl'>Feedback</h2>
 
-        <section className='flex flex-col gap-5 text-slate-400'>
+        <section className='flex flex-col gap-5 text-slate-400 text-justify'>
           <p>When building this website, I wanted to <span className='text-slate-200'>avoid relying on libraries</span> to build components such as cards, tabs, and tooltips, as a challenge to myself. All the code I have produced can be found in this&nbsp;
           <a 
             className='text-orange-400 duration-300 transition-colors hover:text-orange-200'

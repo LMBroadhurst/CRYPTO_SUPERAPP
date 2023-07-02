@@ -1,4 +1,5 @@
 import React from 'react'
+import MahiMarkets from './Experience/MahiMarkets'
 
 const AboutMe = () => {
   return (
@@ -17,6 +18,9 @@ const AboutMe = () => {
             </section>
             
             {/* TODO: Build some components for displaying tech related experience */}
+            <section className='pt-6'>
+              <MahiMarkets />
+            </section>
         </section>  
     </section>  
   )
