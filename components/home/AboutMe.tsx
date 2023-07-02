@@ -1,5 +1,6 @@
 import React from 'react'
 import MahiMarkets from './Experience/MahiMarkets'
+import BNTA from './Experience/BNTA'
 
 const AboutMe = () => {
   return (
@@ -20,6 +21,8 @@ const AboutMe = () => {
             {/* TODO: Build some components for displaying tech related experience */}
             <section className='pt-6'>
               <MahiMarkets />
+
+              <BNTA />
             </section>
         </section>  
     </section>  

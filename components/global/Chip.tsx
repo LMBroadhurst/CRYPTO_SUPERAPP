@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { PropsWithChildren, FC } from 'react'
 
-const Chip = () => {
+type OwnProps = {
+  children: string;
+}
+
+const Chip: FC<OwnProps> & PropsWithChildren = ({
+  children
+}) => {
+
   return (
-    <div>Chip</div>
+    <section className='bg-cyan-800 p-2 px-4 rounded-full text-xs'>
+      {children}
+    </section>
   )
 }
 
