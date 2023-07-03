@@ -3,9 +3,9 @@ import Navigation from './Navigation';
 import Socials from './Socials';
 import AboutMe from './AboutMe';
 import Header from './Header';
-import PublishedContent from './PublishedContent';
-import WorkWithMe from './WorkWithMe';
 import Feedback from './Feedback';
+import Freelance from './Freelance';
+import Content from './Content';
 
 const HomeView: React.FC = () => {
 
@@ -20,7 +20,6 @@ const HomeView: React.FC = () => {
     return (
         <section className='flex flex-col mx-auto sm:w-3/4 lg:flex-row lg:w-[900px] lg:gap-8 lg:py-32 xl:w-[1150px]'>
             
-            {/* Need this fixed whilst other half scrolls */}
             <section className='flex flex-col justify-between p-10 py-32 lg:p-0 lg:w-1/2 lg:h-[700px] lg:sticky lg:top-20'>
                 
                 <section className='flex flex-col gap-8 lg:gap-20'>
@@ -44,9 +43,9 @@ const HomeView: React.FC = () => {
             <section className='flex flex-col gap-10 lg:hidden'>
                 <AboutMe />
 
-                <WorkWithMe />
+                <Freelance />
 
-                <PublishedContent />
+                <Content />
 
                 <Feedback />
             </section>
@@ -54,10 +53,10 @@ const HomeView: React.FC = () => {
             <section className='hidden lg:flex lg:w-1/2'>
                 {
                     activeTabKey === "AboutMe" && <AboutMe /> 
-                    || 
-                    activeTabKey === "PublishedContent" && <PublishedContent /> 
                     ||
-                    activeTabKey === "WorkWithMe" && <WorkWithMe />
+                    activeTabKey === "Freelancing" && <Freelance />
+                    || 
+                    activeTabKey === "Content" && <Content /> 
                     ||
                     activeTabKey === "Feedback" && <Feedback />
                 }

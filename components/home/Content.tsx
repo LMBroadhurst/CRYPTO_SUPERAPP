@@ -34,7 +34,7 @@ const publishedContentPreview: ContentObject[] = [
   }
 ]
 
-const PublishedContent = () => {
+const Content = () => {
 
   const contentToRender = publishedContentPreview.map(pc => {
     
@@ -101,4 +101,4 @@ const PublishedContent = () => {
   )
 }
 
-export default PublishedContent
+export default Content;

@@ -18,8 +18,9 @@ const AboutMe = () => {
               <p><span className='text-slate-200'>Outside of work</span>, I spend my time trying out new languages and programming paradigms, blogging about Web3, participating in Hackathons, attending React/JS events, lifting weights in a gym that needs far better AC, and roaming around <span className='text-slate-200'>London, UK</span>.</p>
             </section>
             
-            {/* TODO: Build some components for displaying tech related experience */}
-            <section className='pt-6 flex flex-col gap-7'>
+            <section className='pt-6 flex flex-col gap-6'>
+              <h2 className='text-2xl self-start -mb-2'>Experience</h2>
+
               <MahiMarkets />
 
               <BNTA />

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-const WorkWithMe = () => {
+const Freelancing = () => {
   return (
     <section 
       className='flex p-10 lg:p-0 lg:w-full'
@@ -14,13 +14,13 @@ const WorkWithMe = () => {
               <p className='text-slate-400'>Alternatively, message me on one of my social media platforms, my DMs are always open.</p>
 
               <section className='text-slate-400 flex flex-col gap-2'>
-                <p>What services do I offer?</p>
+                <h3 className='text-xl text-slate-200'>Services I offer:</h3>
                 <ul className='list-outside list-disc pl-6 flex flex-col gap-1'>
-                  <li>Complete website design and build, with continuous consultation from you to determine the direction of the design and functionality.</li>
-                  <li>Revamping a website with a more modern look, cleanup of the code, migration to newer technologies, & the removal of old tech debt.</li>
-                  <li>Working part-time with you/your company via a pay-per-hour fee.</li>
-                  <li>Tuition for people wanting assisstance with learning how to code, focusing on React & Java.</li>
-                  <li>Writing technical articles for a blog.</li>
+                  <li><span className='text-slate-200'>Complete website design and build</span>, with continuous consultation from you to determine the direction of the design and functionality.</li>
+                  <li><span className='text-slate-200'>Refurbishing your website</span> with a cleaner & more modern look, cleanup of the code, migration to newer technologies, & the removal of old tech debt.</li>
+                  <li>Working <span className='text-slate-200'>part-time</span> with you/your company on a pay-per-hour basis.</li>
+                  <li><span className='text-slate-200'>Tuition</span> for people wanting assisstance with learning how to code, focusing on <span className='text-slate-200'>React, TypeScript, and HTML/CSS</span>.</li>
+                  <li>Writing <span className='text-slate-200'>technical articles</span> for your blog.</li>
                 </ul>
               </section>
 
@@ -40,4 +40,4 @@ const WorkWithMe = () => {
   )
 }
 
-export default WorkWithMe
+export default Freelancing;

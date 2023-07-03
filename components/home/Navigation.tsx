@@ -8,8 +8,8 @@ type OwnProps = {
 
 const navTabs: NavigationTab[] = [
   {text: 'About Me', key: 'AboutMe'}, 
-  {text: 'Published Content', key: 'PublishedContent'}, 
-  {text: 'Work With Me', key: 'WorkWithMe'},
+  {text: 'Freelancing', key: 'Freelancing'},
+  {text: 'Content', key: 'Content'}, 
   {text: 'Feedback', key: 'Feedback'}
 ];
 
