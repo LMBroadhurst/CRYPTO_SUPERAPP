@@ -9,7 +9,7 @@ import Feedback from './Feedback';
 
 const HomeView: React.FC = () => {
 
-    const [activeTabKey, setActiveTabKey] = useState<string>("AboutMe.tsx");
+    const [activeTabKey, setActiveTabKey] = useState<string>("AboutMe");
 
     const handleTabChange = (e: any) => {
         console.log(e.target.id);
@@ -53,13 +53,13 @@ const HomeView: React.FC = () => {
 
             <section className='hidden lg:flex lg:w-1/2'>
                 {
-                    activeTabKey === "AboutMe.tsx" && <AboutMe /> 
+                    activeTabKey === "AboutMe" && <AboutMe /> 
                     || 
-                    activeTabKey === "PublishedContent.tsx" && <PublishedContent /> 
+                    activeTabKey === "PublishedContent" && <PublishedContent /> 
                     ||
-                    activeTabKey === "WorkWithMe.tsx" && <WorkWithMe />
+                    activeTabKey === "WorkWithMe" && <WorkWithMe />
                     ||
-                    activeTabKey === "Feedback.tsx" && <Feedback />
+                    activeTabKey === "Feedback" && <Feedback />
                 }
             </section>
         </section>

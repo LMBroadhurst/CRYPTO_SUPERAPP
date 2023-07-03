@@ -9,7 +9,7 @@ const Header = () => {
             <a 
                 href='https://mahimarkets.com/' 
                 target='_blank'
-                className='text-orange-500 transition-colors duration-500 hover:cursor-pointer hover:text-orange-300'
+                className='text-orange-400 transition-colors duration-500 hover:cursor-pointer hover:text-orange-300'
             > MahiMarkets</a>
         </h2>
 

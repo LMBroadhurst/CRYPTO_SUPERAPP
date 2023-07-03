@@ -7,10 +7,10 @@ type OwnProps = {
 };
 
 const navTabs: NavigationTab[] = [
-  {text: 'About Me', key: 'AboutMe.tsx'}, 
-  {text: 'Published Content', key: 'PublishedContent.tsx'}, 
-  {text: 'Work With Me', key: 'WorkWithMe.tsx'},
-  {text: 'Feedback', key: 'Feedback.tsx'}
+  {text: 'About Me', key: 'AboutMe'}, 
+  {text: 'Published Content', key: 'PublishedContent'}, 
+  {text: 'Work With Me', key: 'WorkWithMe'},
+  {text: 'Feedback', key: 'Feedback'}
 ];
 
 const Navigation: FC<OwnProps> = ({
@@ -26,14 +26,13 @@ const Navigation: FC<OwnProps> = ({
               <li 
                 className={`
                    duration-200 transition-all hover:text-orange-600 hover:cursor-pointer hover:translate-x-0.5
-                  ${ activeTabKey === navTab.key && 'text-orange-500 translate-x-1 font-bold'}
-                  ${ navTab.key === 'Feedback.tsx' && 'hover:cursor-not-allowed'}
+                  ${ activeTabKey === navTab.key && 'text-orange-400 translate-x-1'}
                 `}
                 id={navTab.key}
                 key={navTab.key}
                 onClick={handleTabChange}
               >
-                {navTab.text}
+                  {navTab.text}
               </li>
             )
           }
