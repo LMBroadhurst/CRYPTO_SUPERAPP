@@ -19,7 +19,7 @@ const AboutMe = () => {
             </section>
             
             {/* TODO: Build some components for displaying tech related experience */}
-            <section className='pt-6'>
+            <section className='pt-6 flex flex-col gap-7'>
               <MahiMarkets />
 
               <BNTA />

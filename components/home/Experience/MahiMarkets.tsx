@@ -10,14 +10,14 @@ const MahiMarkets = () => {
         shadow-md shadow-cyan-800'
       >
         <section>
-          <h3 className='text-2xl font-medium'>Mahi Markets - Full Stack Engineer</h3>
+          <h3 className='text-2xl font-medium text-slate-200'>Mahi Markets - Full Stack Engineer</h3>
           <span className='text-slate-400 text-sm'>December 2022 - Present</span>
         </section>
 
 
         <p className='text-slate-400'>Mahi Markets is an innovative FinTech company that primarily provides software to FX exchanges, which drives PnL, protects against toxic clients, allows for the production of bespoke pricing, and more.</p>
 
-        <span className='text-slate-400'>Responsibilities include:</span>
+        <span className='text-slate-400'>Summary of responsibilities:</span>
         <ul className='list-disc list-outside px-6 flex flex-col gap-2 text-slate-400'>
             <li>Building type safe UI components with <span className='text-cyan-400'>Typescript and React</span>. Handling state with <span className='text-cyan-400'>Redux</span> and serialising data via <span className='text-cyan-400'>Protobuf</span>.</li>
             <li>Writing robust server side code in <span className='text-cyan-400'>Java 11</span>, such as FIX adapters and API's. Tested with <span className='text-cyan-400'>JUnit</span>.</li>
@@ -25,11 +25,11 @@ const MahiMarkets = () => {
             <li><span className='text-cyan-400'>Rotational support duty</span>, attending to client requests and issues, in addition to being an emergency contact out of hours.</li>
         </ul>
 
-        <section className='flex flex-col gap-4'>
+        <section className='flex flex-col gap-4 py-2'>
           <section>
             <ul className='flex flex-row gap-3 flex-wrap'>
               {
-                technologies.map((tech) => <Chip>{tech}</Chip>)
+                technologies.map((tech) => <Chip bgColour='bg-cyan-900'>{tech}</Chip>)
               }
             </ul>
           </section>

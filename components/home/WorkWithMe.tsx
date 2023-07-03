@@ -9,6 +9,14 @@ const WorkWithMe = () => {
             <section className='flex flex-col gap-5 text-justify'>
               <p className='text-slate-400'>I love to help business owners and entrepeneurs promote their presence online with effective websites. Please get in contact using the mail link below, where we can organise a call or meetup and see if we are compatible.</p>
 
+              <section className='text-slate-400'>
+                <p>What services do I offer?</p>
+                <ul className='list-outside list-disc pl-6'>
+                  <li>Complete website design and build, with continuous consultation from you to determine the direction of the design.</li>
+                  <li>Revamping a website with a more modern look, cleanup of the code, migration to newer technologies, & the removal of old tech debt.</li>
+                </ul>
+              </section>
+
               <p className='text-slate-400'>Alternatively, message me on one of my social media platforms, my DMs are always open.</p>
 
               <a
