@@ -17,7 +17,7 @@ const publishedContentPreview: ContentObject[] = [
     description: 'Part 2 of an exploration into Uniswap, a powerhouse of DeFi. In this article I explore the Governance and liquidity aspects of the protocol.',
     date: 'May 26th 2023',
     image: UNISWAPP2,
-    tags: ['AMM', 'ETH', 'Web3']
+    tags: ['AMM', 'Web3', 'Uniswap']
   },
   {
     url: 'https://medium.com/block-magnates/uniswap-v2-the-power-of-the-amm-e565bd3f3ac1',
@@ -26,7 +26,7 @@ const publishedContentPreview: ContentObject[] = [
     description: 'Part 1 of an exploration into Uniswap, specifically focusing on the mechanics of how AMMs/DEXs work. Great introduction into DeFi and the benefits of DeFi for anyone new to the space.',
     date: 'May 19th 2023',
     image: UNISWAPP1,
-    tags: ['AMM', 'ETH', 'Web3']
+    tags: ['AMM', 'Web3', 'Uniswap']
   },
   {
     url: 'https://medium.com/@lewis1broadhurst/erc20-what-why-5b300dff5aa6',

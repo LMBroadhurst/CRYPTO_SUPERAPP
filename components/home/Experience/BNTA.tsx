@@ -2,7 +2,7 @@ import React from 'react';
 import Chip from '@/components/global/Chip';
 
 
-const technologies = ['SQL', 'Ansible', 'Java', 'XML/MDML', 'UNIX', 'React', 'JavaScript', 'Java', 'Spring Boot'];
+const technologies = ['SQL', 'Ansible', 'Java', 'XML/MDML', 'UNIX', 'React', 'JavaScript', 'Spring Boot'];
 
 const BNTA = () => {
   return (
@@ -29,7 +29,7 @@ const BNTA = () => {
           <section>
             <ul className='flex flex-row gap-3 flex-wrap'>
               {
-                technologies.map((tech) => <Chip bgColour={'bg-emerald-800'}>{tech}</Chip>)
+                technologies.map((tech) => <Chip key={tech} bgColour={'bg-emerald-800'}>{tech}</Chip>)
               }
             </ul>
           </section>

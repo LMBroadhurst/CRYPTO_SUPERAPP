@@ -29,7 +29,7 @@ const MahiMarkets = () => {
           <section>
             <ul className='flex flex-row gap-3 flex-wrap'>
               {
-                technologies.map((tech) => <Chip bgColour='bg-cyan-900'>{tech}</Chip>)
+                technologies.map((tech) => <Chip key={tech} bgColour='bg-cyan-900'>{tech}</Chip>)
               }
             </ul>
           </section>

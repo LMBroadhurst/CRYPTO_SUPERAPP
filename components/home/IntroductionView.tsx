@@ -10,12 +10,7 @@ import Content from './Content';
 const HomeView: React.FC = () => {
 
     const [activeTabKey, setActiveTabKey] = useState<string>("AboutMe");
-
-    const handleTabChange = (e: any) => {
-        console.log(e.target.id);
-        setActiveTabKey(e.target.id);
-    };
-
+    const handleTabChange = (e: any) => setActiveTabKey(e.target.id);
 
     return (
         <section className='flex flex-col mx-auto sm:w-3/4 lg:flex-row lg:w-[900px] lg:gap-8 lg:py-32 xl:w-[1150px]'>
@@ -40,7 +35,7 @@ const HomeView: React.FC = () => {
                 </div>
             </section>
 
-            <section className='flex flex-col gap-10 lg:hidden'>
+            <section className='flex flex-col gap-32 lg:hidden'>
                 <AboutMe />
 
                 <Freelance />

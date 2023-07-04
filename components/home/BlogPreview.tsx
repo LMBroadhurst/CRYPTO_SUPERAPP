@@ -43,12 +43,15 @@ const BlogPreview: FC<OwnProps> = ({
                     className='rounded-md'
                 />
 
-                <section className='flex flex-row justify-between items-center'>
+                <section className='flex flex-col-reverse gap-2 justify-between items-center sm:flex-row'>
                     <span className='text-sm text-slate-500'>{date}</span>
                     <section className='flex flex-row justify-end gap-2'>
                         {
                             tags.map(tag => 
-                                <Chip bgColour='bg-sky-800'>
+                                <Chip 
+                                    key={tag}
+                                    bgColour='bg-sky-800'
+                                >
                                     {tag}
                                 </Chip>)
                         }
