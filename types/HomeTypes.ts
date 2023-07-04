@@ -17,6 +17,7 @@ type ContentObject = {
     description: string;
     date: string;
     image: StaticImageData;
+    tags: string[];
 }
 
 export {

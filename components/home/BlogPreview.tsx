@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { StaticImageData } from 'next/image';
+import Chip from '../global/Chip';
 
 type OwnProps = {
     url: string;
@@ -7,6 +8,7 @@ type OwnProps = {
     description: string;
     image: StaticImageData;
     date: string;
+    tags: string[];
 }
 
 const BlogPreview: FC<OwnProps> = ({
@@ -14,7 +16,8 @@ const BlogPreview: FC<OwnProps> = ({
     title,
     description,
     image,
-    date
+    date,
+    tags
 }) => {
 
   return (
@@ -35,13 +38,22 @@ const BlogPreview: FC<OwnProps> = ({
                 <p className='text-slate-500'>{description}</p>
 
                 <img 
-                    src={image.src} 
+                    src={image?.src} 
                     alt=''
                     className='rounded-md'
                 />
 
-                {/* TODO: Add some chips in here? */}
-                <span className='text-sm text-slate-500'>{date}</span>
+                <section className='flex flex-row justify-between items-center'>
+                    <span className='text-sm text-slate-500'>{date}</span>
+                    <section className='flex flex-row justify-end gap-2'>
+                        {
+                            tags.map(tag => 
+                                <Chip bgColour='bg-sky-800'>
+                                    {tag}
+                                </Chip>)
+                        }
+                    </section>
+                </section>
             </section>
         </section>
     </a>
