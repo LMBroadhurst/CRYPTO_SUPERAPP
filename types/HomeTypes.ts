@@ -12,7 +12,6 @@ type NavigationTab = {
 
 type ContentObject = {
     url: string;
-    type: string;
     title: string;
     description: string;
     date: string;

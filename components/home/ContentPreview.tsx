@@ -11,7 +11,7 @@ type OwnProps = {
     tags: string[];
 }
 
-const BlogPreview: FC<OwnProps> = ({
+const ContentPreview: FC<OwnProps> = ({
     url,
     title,
     description,
@@ -28,9 +28,9 @@ const BlogPreview: FC<OwnProps> = ({
     >
         <section 
             className='
-                flex flex-row justify-between items-center gap-8 rounded-lg p-4 bg-blue-700
-                transition-all duration-500 bg-opacity-10 shadow-md shadow-sky-700
-                hover:cursor-pointer hover:shadow-sky-400 hover:bg-gray-900'
+                flex flex-row justify-between items-center gap-8 rounded-lg p-4 bg-gray-800
+                transition-all duration-500 shadow-md shadow-sky-700
+                hover:cursor-pointer hover:bg-gray-700 hover:shadow-sky-600'
         >
             <section className='flex flex-col gap-4'>
                 <h3 className='text-lg sm:text-xl text-slate-200'>{title}</h3>
@@ -63,4 +63,4 @@ const BlogPreview: FC<OwnProps> = ({
   )
 }
 
-export default BlogPreview
+export default ContentPreview
