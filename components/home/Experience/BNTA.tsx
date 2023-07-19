@@ -8,7 +8,7 @@ const BNTA = () => {
   return (
     <section 
       className='bg-slate-800 rounded-lg p-4 flex flex-col gap-4
-        shadow-md shadow-emerald-800'
+        shadow-md shadow-cyan-800'
       >
         <section>
           <h3 className='text-2xl font-medium'>BNTA - Junior Full Stack Engineer</h3>
@@ -20,16 +20,16 @@ const BNTA = () => {
 
         <span className='text-slate-400'>Responsibilities included:</span>
         <ul className='list-disc list-outside px-6 flex flex-col gap-2 text-slate-400'>
-          <li>Learned an XML/Java superset language (FTL) from documentation and code examples to build a <span className='text-emerald-400'>csv transformation interface</span> that outputs relevant data in an .mdml format on UNIX.</li>
-          <li><span className='text-emerald-400'>Improved the transparency of market data</span> by coding an FTP system that directly converts market data received from Bloomberg & Refinitiv into the Murex system.</li>
-          <li>Participated in several side of desk tasks, including joining and <span className='text-emerald-400'>contributing the the L&D committee</span> and being the <span className='text-emerald-400'>LBG London client representative</span> for BNTA</li>
+          <li>Learned an XML/Java superset language (FTL) from documentation and code examples to build a <span className='text-cyan-400'>csv transformation interface</span> that outputs relevant data in an .mdml format on UNIX.</li>
+          <li><span className='text-cyan-400'>Improved the transparency of market data</span> by coding an FTP system that directly converts market data received from Bloomberg & Refinitiv into the Murex system.</li>
+          <li>Participated in several side of desk tasks, including joining and <span className='text-cyan-400'>contributing the the L&D committee</span> and being the <span className='text-cyan-400'>LBG London client representative</span> for BNTA</li>
         </ul>
 
         <section className='flex flex-col gap-4 py-2'>
           <section>
             <ul className='flex flex-row gap-3 flex-wrap'>
               {
-                technologies.map((tech) => <Chip key={tech} bgColour={'bg-emerald-800'}>{tech}</Chip>)
+                technologies.map((tech) => <Chip key={tech} bgColour={'bg-cyan-800'}>{tech}</Chip>)
               }
             </ul>
           </section>
