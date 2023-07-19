@@ -29,7 +29,7 @@ const BNTA = () => {
           <section>
             <ul className='flex flex-row gap-3 flex-wrap'>
               {
-                technologies.map((tech) => <Chip key={tech} bgColour={'bg-cyan-800'}>{tech}</Chip>)
+                technologies.map((tech) => <Chip key={tech} bgColour={'bg-cyan-900'}>{tech}</Chip>)
               }
             </ul>
           </section>
