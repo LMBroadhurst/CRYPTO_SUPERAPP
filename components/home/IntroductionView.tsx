@@ -38,7 +38,7 @@ const HomeView: React.FC = () => {
             <section className='flex flex-col gap-32 lg:hidden'>
                 <AboutMe />
 
-                <Freelance />
+{/*                 <Freelance /> */}
 
                 <Content />
 
@@ -48,8 +48,6 @@ const HomeView: React.FC = () => {
             <section className='hidden lg:flex lg:w-1/2'>
                 {
                     activeTabKey === "AboutMe" && <AboutMe /> 
-                    ||
-                    activeTabKey === "Freelancing" && <Freelance />
                     || 
                     activeTabKey === "Content" && <Content /> 
                     ||
