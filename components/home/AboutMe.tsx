@@ -15,7 +15,7 @@ const AboutMe = () => {
 
               <p>Since then, I have proudly been <span className='text-slate-200'>employed as a Full Stack Engineer</span> for a large UK retail bank, and currently work for an innovative FX focused fintech company.</p>
 
-              <p><span className='text-slate-200'>Outside of work</span>, I spend my time trying out new languages and programming paradigms, blogging about Web3, participating in Hackathons, attending React/JS events, lifting weights in a gym that needs far better AC, and roaming around <span className='text-slate-200'>London, UK</span>.</p>
+              <p><span className='text-slate-200'>Outside of work</span>, I spend my time continually building up my engineering skillset, blogging & recording YouTube videos, completing parkruns, amateur astrology, attending React/JS events, lifting weights in a gym that needs far better AC, and roaming around <span className='text-slate-200'>London, UK</span>.</p>
             </section>
             
             <section className='pt-6 flex flex-col gap-6'>

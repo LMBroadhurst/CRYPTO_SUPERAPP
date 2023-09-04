@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import Navigation from './Navigation';
+import Navigation, { NavigationTabs } from './Navigation';
 import Socials from './Socials';
 import AboutMe from './AboutMe';
 import Header from './Header';
 import Feedback from './Feedback';
 import Freelance from './Freelance';
 import Content from './Content';
+import Link from 'next/link';
+import Portfolio from './Portfolio';
+import Blog from '../blog/Blog';
 
 const HomeView: React.FC = () => {
 
@@ -38,20 +41,22 @@ const HomeView: React.FC = () => {
             <section className='flex flex-col gap-32 lg:hidden'>
                 <AboutMe />
 
-{/*                 <Freelance /> */}
-
                 <Content />
+
+                <Portfolio />
 
                 <Feedback />
             </section>
 
             <section className='hidden lg:flex lg:w-1/2'>
                 {
-                    activeTabKey === "AboutMe" && <AboutMe /> 
-                    || 
-                    activeTabKey === "Content" && <Content /> 
+                    activeTabKey === NavigationTabs.ABOUT_ME && <AboutMe /> 
                     ||
-                    activeTabKey === "Feedback" && <Feedback />
+                    activeTabKey === NavigationTabs.PORTFOLIO && <Portfolio />
+                    ||
+                    activeTabKey === NavigationTabs.CONTENT && <Content /> 
+                    ||
+                    activeTabKey === NavigationTabs.FEEDBACK && <Feedback />
                 }
             </section>
         </section>

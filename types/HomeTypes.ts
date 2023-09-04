@@ -5,11 +5,6 @@ type SocialItem = {
     icon: React.JSX.Element;
 }
 
-type NavigationTab = {
-    text: string;
-    key: string;
-}
-
 type ContentObject = {
     url: string;
     title: string;
@@ -21,6 +16,5 @@ type ContentObject = {
 
 export {
     type SocialItem,
-    type NavigationTab,
     type ContentObject
 };
