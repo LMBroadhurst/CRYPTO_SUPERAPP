@@ -8,7 +8,7 @@ type SocialItem = {
 type ContentObject = {
     url: string;
     title: string;
-    description: string;
+    description: React.ReactNode;
     date: string;
     image: StaticImageData;
     tags: string[];

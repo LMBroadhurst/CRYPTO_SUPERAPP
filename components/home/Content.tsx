@@ -11,7 +11,7 @@ const publishedContentPreview: ContentObject[] = [
   {
     url: 'https://medium.com/block-magnates/uniswap-v2-the-power-of-the-amm-b53bb60450be', 
     title: 'Uniswap V2: The Power of the AMM',
-    description: 'Part 2 of an exploration into Uniswap, a powerhouse of DeFi. In this article I explore the Governance and liquidity aspects of the protocol.',
+    description: <p>Part 2 of an exploration into Uniswap, a powerhouse of DeFi. In this article I explore the Governance and liquidity aspects of the protocol.</p>,
     date: 'May 26th 2023',
     image: UNISWAPP2,
     tags: ['AMM', 'Web3', 'Uniswap']
@@ -19,7 +19,7 @@ const publishedContentPreview: ContentObject[] = [
   {
     url: 'https://medium.com/block-magnates/uniswap-v2-the-power-of-the-amm-e565bd3f3ac1',
     title: 'Uniswap V2: The Power of the AMM',
-    description: 'Part 1 of an exploration into Uniswap, specifically focusing on the mechanics of how AMMs/DEXs work. Great introduction into DeFi and the benefits of DeFi for anyone new to the space.',
+    description: <p>Part 1 of an exploration into Uniswap, specifically focusing on the mechanics of how AMMs/DEXs work. Great introduction into DeFi and the benefits of DeFi for anyone new to the space.</p>,
     date: 'May 19th 2023',
     image: UNISWAPP1,
     tags: ['AMM', 'Web3', 'Uniswap']
@@ -27,7 +27,7 @@ const publishedContentPreview: ContentObject[] = [
   {
     url: 'https://medium.com/@lewis1broadhurst/erc20-what-why-5b300dff5aa6',
     title: 'ERC20: What & Why?',
-    description: 'A dive into the history of ERC20 tokens, how they came into existence, what they acheive, and why they are an important standard in the crypto space.',
+    description: <p>A dive into the history of ERC20 tokens, how they came into existence, what they acheive, and why they are an important standard in the crypto space.</p>,
     date: 'May 12th 2023',
     image: ERC20,
     tags: ['ERC20', 'Web3', 'ETH']
@@ -35,7 +35,7 @@ const publishedContentPreview: ContentObject[] = [
   {
     url: 'https://www.youtube.com/watch?v=ZZir6e-iG0g',
     title: 'Flexbox Tutorial',
-    description: 'Still struggling to center that div? Flexbox to the rescue! Flexbox is a powerful model which simplifies website structure and is an essential component of modern CSS. In this tutorial I recreate a section of the IMBD website, solely focusing on flexbox.',
+    description: <p>Still struggling to center that div? Flexbox to the rescue! Flexbox is a powerful model which simplifies website structure and is an essential component of modern CSS. In this tutorial I recreate a section of the IMBD website, solely focusing on flexbox.</p>,
     date: 'Aug 15th 2022',
     image: FLEXBOX,
     tags: ['Flexbox', 'CSS', 'UI']
@@ -43,7 +43,7 @@ const publishedContentPreview: ContentObject[] = [
   {
     url: 'https://www.youtube.com/watch?v=_I9V0rIOP_8',
     title: 'Tailwind CSS Tutorial',
-    description: 'Ever found yourself overwriting CSS styling by adding another CSS class to an already bloated CSS file with higher specificity, whilst not being able to touch the old class in case of a website wide disaster? `!important` everything and hope for the best? Say hello to Tailwind, a utility first CSS framework, where you write CSS within your HTML/HTML equivalent file. In this 90min tutorial, I recreate a basic website from my bootcamp using HTML, Tailwind, and a little JS.',
+    description: <p>Ever found yourself overwriting CSS styling by adding another CSS class to an already bloated CSS file with higher specificity, whilst not being able to touch the old class in case of a website wide disaster? `!important` everything and hope for the best? Say hello to Tailwind, a utility first CSS framework, where you write CSS within your HTML/HTML equivalent file. In this 90min tutorial, I recreate a basic website from my bootcamp using HTML, Tailwind, and a little JS.</p>,
     date: 'Aug 5th 2022',
     image: TAILWIND,
     tags: ['Tailwind', 'CSS', 'UI']
@@ -63,6 +63,7 @@ const Content = () => {
         date={pc.date}
         tags={pc.tags}
       />
+
     )
   );
 

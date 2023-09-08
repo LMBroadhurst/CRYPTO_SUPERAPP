@@ -5,7 +5,7 @@ import Chip from '../global/Chip';
 type OwnProps = {
     url: string;
     title: string;
-    description: string;
+    description: React.ReactNode;
     image: StaticImageData;
     date: string;
     tags: string[];

@@ -4,15 +4,12 @@ import Socials from './Socials';
 import AboutMe from './AboutMe';
 import Header from './Header';
 import Feedback from './Feedback';
-import Freelance from './Freelance';
 import Content from './Content';
-import Link from 'next/link';
 import Portfolio from './Portfolio';
-import Blog from '../blog/Blog';
 
 const HomeView: React.FC = () => {
 
-    const [activeTabKey, setActiveTabKey] = useState<string>("AboutMe");
+    const [activeTabKey, setActiveTabKey] = useState<string>(NavigationTabs.ABOUT_ME);
     const handleTabChange = (e: any) => setActiveTabKey(e.target.id);
 
     return (
@@ -24,7 +21,7 @@ const HomeView: React.FC = () => {
                     <Header />
 
                     <Navigation
-                        activeTabKey={activeTabKey} 
+                        activeTabKey={activeTabKey}
                         handleTabChange={handleTabChange}
                     />
                     

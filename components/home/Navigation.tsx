@@ -24,7 +24,7 @@ const navTabs: NavigationTabs[] = [
 
 const Navigation: FC<OwnProps> = ({
   activeTabKey,
-  handleTabChange
+  handleTabChange,
 }) => {
 
   return (
