@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Navigation, { NavigationTabs } from './Navigation';
 import Socials from './Socials';
 import AboutMe from './AboutMe';
-import Header from './Header';
-import Feedback from './Feedback';
-import Content from './Content';
-import Portfolio from './Portfolio';
+import Header from '../global/Header';
+import Feedback from './FeedbackView';
+import Content from './ContentView';
+import Portfolio from './PortfolioView';
 
 const HomeView: React.FC = () => {
 

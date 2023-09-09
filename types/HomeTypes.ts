@@ -5,7 +5,7 @@ type SocialItem = {
     icon: React.JSX.Element;
 }
 
-type ContentObject = {
+type CardContents = {
     url: string;
     title: string;
     description: React.ReactNode;
@@ -16,5 +16,5 @@ type ContentObject = {
 
 export {
     type SocialItem,
-    type ContentObject
+    type CardContents
 };

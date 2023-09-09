@@ -4,10 +4,10 @@ import UNISWAPP2 from './assets/UNISWAPP2.webp';
 import ERC20 from './assets/ERC20.webp';
 import TAILWIND from './assets/Tailwind.jpg';
 import FLEXBOX from './assets/Flexbox.jpg'
-import { ContentObject } from '@/types/HomeTypes';
-import ContentPreview from './ContentPreview';
+import { CardContents } from '@/types/HomeTypes';
+import ContentPreview from '../global/ContentPreview';
 
-const publishedContentPreview: ContentObject[] = [
+const publishedContentPreview: CardContents[] = [
   {
     url: 'https://medium.com/block-magnates/uniswap-v2-the-power-of-the-amm-b53bb60450be', 
     title: 'Uniswap V2: The Power of the AMM',
@@ -97,10 +97,12 @@ const Content = () => {
                 videos below.
               </p>
             </section>
-        </section>  
+        </section> 
+
         <section className='flex flex-col gap-5'>
           {contentToRender}
         </section>
+        
     </section>  
   )
 }
