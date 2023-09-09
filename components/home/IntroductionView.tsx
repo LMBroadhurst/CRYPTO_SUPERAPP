@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Navigation, { NavigationTabs } from './Navigation';
-import Socials from './Socials';
-import AboutMe from './AboutMe';
+import Navigation, { NavigationTabs } from '../global/Navigation';
+import Socials from '../global/Socials';
+import AboutMe from './AboutMeView';
 import Header from '../global/Header';
 import Feedback from './FeedbackView';
 import Content from './ContentView';

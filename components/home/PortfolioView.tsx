@@ -1,5 +1,5 @@
 import React from 'react'
-import ContentPreview from '../global/ContentPreview'
+import ContentPreview from '../global/Card'
 import CODERCOMMERCE from './assets/CODERCOMMERCE.png'
 import LEVELGROUND from './assets/LEVELGROUND.png'
 import KENTCDODDS from './assets/KENTCDODDS.png'

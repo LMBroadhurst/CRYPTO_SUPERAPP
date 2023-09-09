@@ -5,7 +5,7 @@ import ERC20 from './assets/ERC20.webp';
 import TAILWIND from './assets/Tailwind.jpg';
 import FLEXBOX from './assets/Flexbox.jpg'
 import { CardContents } from '@/types/HomeTypes';
-import ContentPreview from '../global/ContentPreview';
+import ContentPreview from '../global/Card';
 
 const publishedContentPreview: CardContents[] = [
   {

@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { StaticImageData } from 'next/image';
 import Chip from './Chip';
+import Link from 'next/link';
 
 type OwnProps = {
     url: string;
@@ -21,7 +22,7 @@ const ContentPreview: FC<OwnProps> = ({
 }) => {
 
   return (
-    <a 
+    <Link 
         className='self-stretch'
         href={url}
         target='_blank'
@@ -59,7 +60,7 @@ const ContentPreview: FC<OwnProps> = ({
                 </section>
             </section>
         </section>
-    </a>
+    </Link>
   )
 }
 
