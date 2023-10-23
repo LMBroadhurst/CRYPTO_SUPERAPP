@@ -68,43 +68,42 @@ const Content = () => {
   );
 
 
-  return (
-    <section className='flex flex-col gap-10 p-10 lg:p-0 lg:w-full'>
+    return <section className='flex flex-col gap-10 p-10 lg:p-0 lg:w-full'>
         <section className='flex flex-col gap-2 text-justify'>
             <h2 className='text-2xl self-start'>Content</h2>
 
             <section className='flex flex-col gap-5 text-justify'>
-              <p className='text-slate-500'>Since becoming a software engineer I have created a range of content, ranging from <span className='text-slate-200'>YouTube tutorials</span> and informative <span className='text-slate-200'>blogs on Web3 technologies</span>.</p>
-              
-              <p className='text-slate-500'>I've found it to be a great learning experience for my own development, and hopefully has allowed others to gain understanding of the topics I have covered.</p>
+            <p className='text-slate-500'>Since becoming a software engineer I have created a range of content, ranging from <span className='text-slate-200'>YouTube tutorials</span> and informative <span className='text-slate-200'>blogs on Web3 technologies</span>.</p>
+            
+            <p className='text-slate-500'>I've found it to be a great learning experience for my own development, and hopefully has allowed others to gain understanding of the topics I have covered.</p>
 
-              <p className='text-slate-500'>Check out my&nbsp;
+            <section className='text-slate-500'>Check out my&nbsp;
                 <a 
-                  href="https://medium.com/@lewis1broadhurst"
-                  target='_blank'
-                  className='text-orange-400'
+                    href="https://medium.com/@lewis1broadhurst"
+                    target='_blank'
+                    className='text-orange-400'
                 >
-                  Blog&nbsp;
+                    Blog&nbsp;
                 </a> 
-                and&nbsp;
+                    and&nbsp;
                 <a 
-                  href="https://www.youtube.com/channel/UCv8iDXiyBoaNRtPmFt-fOYw"
-                  target='_blank'
-                  className='text-orange-400'
+                    href="https://www.youtube.com/channel/UCv8iDXiyBoaNRtPmFt-fOYw"
+                    target='_blank'
+                    className='text-orange-400'
                 >
-                  YouTube&nbsp;
+                    YouTube&nbsp;
                 </a>
                 videos below.
-              </p>
+            </section>
             </section>
         </section> 
 
         <section className='flex flex-col gap-5'>
-          {contentToRender}
+            {contentToRender}
         </section>
-        
+            
     </section>  
-  )
+  
 }
 
 export default Content;
