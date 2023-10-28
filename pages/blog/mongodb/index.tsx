@@ -1,6 +1,6 @@
 "use client"
-import Comparators from '@/components/mongodb/Comparators'
-import FindOne from '@/components/mongodb/Find'
+import Comparators from '@/components/mongodb/crud/Comparators'
+import FindOne from '@/components/mongodb/crud/Find'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
