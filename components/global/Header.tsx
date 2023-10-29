@@ -14,7 +14,7 @@ const Header = () => {
         </h2>
 
         <p className='text-md text-slate-400 w-2/3 sm:text-justify sm:4/5'>
-            Excited by shipping new products and features that simultaneously provide business value and are aesthetically pleasing.
+            Driven by shipping new products and features that provide value to businesses and customers.
         </p>
 
     </section>
