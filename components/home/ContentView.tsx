@@ -73,11 +73,9 @@ const Content = () => {
             <h2 className='text-2xl self-start'>Content</h2>
 
             <section className='flex flex-col gap-5 text-justify'>
-            <p className='text-slate-500'>Since becoming a software engineer I have created a range of content, ranging from <span className='text-slate-200'>YouTube tutorials</span> and informative <span className='text-slate-200'>blogs on Web3 technologies</span>.</p>
-            
-            <p className='text-slate-500'>I've found it to be a great learning experience for my own development, and hopefully has allowed others to gain understanding of the topics I have covered.</p>
+            <p className='text-slate-400'>Since becoming a software engineer I have created a range of content, ranging from <span className='text-slate-200'>YouTube tutorials</span> and informative <span className='text-slate-200'>blogs on Web3 technologies</span>. I've found it to be a great learning experience for my own development, and hopefully has allowed others to gain understanding of the topics I have covered.</p>
 
-            <section className='text-slate-500'>Check out my&nbsp;
+            <section className='text-slate-400'>Check out my&nbsp;
                 <a 
                     href="https://medium.com/@lewis1broadhurst"
                     target='_blank'

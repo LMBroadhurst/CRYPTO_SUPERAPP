@@ -3,7 +3,6 @@ import Navigation, { NavigationTabs } from '../global/Navigation';
 import Socials from '../global/Socials';
 import AboutMe from './AboutMeView';
 import Header from '../global/Header';
-import Feedback from './FeedbackView';
 import Content from './ContentView';
 import Portfolio from './PortfolioView';
 
@@ -42,7 +41,6 @@ const HomeView: React.FC = () => {
 
                 <Portfolio />
 
-                <Feedback />
             </section>
 
             <section className='hidden lg:flex lg:w-1/2'>
@@ -52,8 +50,6 @@ const HomeView: React.FC = () => {
                     activeTabKey === NavigationTabs.PORTFOLIO && <Portfolio />
                     ||
                     activeTabKey === NavigationTabs.CONTENT && <Content /> 
-                    ||
-                    activeTabKey === NavigationTabs.FEEDBACK && <Feedback />
                 }
             </section>
         </section>

@@ -10,15 +10,12 @@ enum NavigationTabs {
   ABOUT_ME = 'About Me',
   PORTFOLIO = 'Portfolio',
   CONTENT = 'Content',
-  FEEDBACK = 'Feedback',
-  FREELANCING = 'Freelancing'
 }
 
 const navTabs: NavigationTabs[] = [
   NavigationTabs.ABOUT_ME,
   NavigationTabs.PORTFOLIO,
-  NavigationTabs.CONTENT,
-  NavigationTabs.FEEDBACK
+  NavigationTabs.CONTENT
 ];
 
 const Navigation: FC<OwnProps> = ({

@@ -20,7 +20,6 @@ const MahiMarkets = () => {
           <li>Improving products offered by shipping new features for our clients via UI components built with Typescript & React. Removing tech debt by refactoring code to meet modern React/JS/TS standards (ES6, React 18). Fluent using advanced react patterns such as custom hooks and useMemo & useCallback for performance. Plumbing Async Redux Epics and Ajax HTTP methods up to the REST API.</li>
           <li>Designing and improving user stories. Proudly reworked a complicated form to increase the usability of the product and guide clients through the process with confidence.</li>
           <li>Building FIX adaptors and REST APIs, tested with Junit and written in Java18. Deploying our apps onto CentOS linux servers via AWS S3 Tarballs. Securing servers by creating relevant IAM roles, inline policies, whitelisting, etc.</li>
-          <li>Pushed to start a questionnaire to clients to get feedback on our system to guide our development work. Collaborating with the sales team to deliver newsletters for our company and clients with new dev features we are releasing.</li>
           <li>Agile methodology with morning standups, tickets via Jira, PRs with Git/GitHub.Rotational 2nd line support duty, working on call for 12hr shifts.</li>
         </ul>
 

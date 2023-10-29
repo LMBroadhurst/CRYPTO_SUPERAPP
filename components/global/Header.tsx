@@ -13,7 +13,9 @@ const Header = () => {
             > MahiMarkets</a>
         </h2>
 
-        <p className='text-md text-slate-500 w-2/3 sm:text-justify sm:4/5'>Chemist in a previous life, now experimenting with code. Excited by shipping new products and features that simultaneously provide business value and look sleek.</p>
+        <p className='text-md text-slate-400 w-2/3 sm:text-justify sm:4/5'>
+            Excited by shipping new products and features that simultaneously provide business value and are aesthetically pleasing.
+        </p>
 
     </section>
   )
