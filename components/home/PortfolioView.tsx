@@ -3,7 +3,7 @@ import ContentPreview from '../global/Card'
 import CODERCOMMERCE from './assets/CODERCOMMERCE.png'
 import LEVELGROUND from './assets/LEVELGROUND.png'
 import KENTCDODDS from './assets/KENTCDODDS.png'
-import { CardContents } from '@/types/HomeTypes'
+import { CardContents } from '@/components/home/HomeTypes'
 
 const contentToRender: CardContents[] = [
   {

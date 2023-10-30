@@ -4,7 +4,7 @@ import UNISWAPP2 from './assets/UNISWAPP2.webp';
 import ERC20 from './assets/ERC20.webp';
 import TAILWIND from './assets/Tailwind.jpg';
 import FLEXBOX from './assets/Flexbox.jpg'
-import { CardContents } from '@/types/HomeTypes';
+import { CardContents } from '@/components/home/HomeTypes';
 import ContentPreview from '../global/Card';
 
 const publishedContentPreview: CardContents[] = [

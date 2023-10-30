@@ -1,6 +1,6 @@
 import React from 'react';
 import { GithubOutlined, LinkedinFilled, MediumSquareFilled, YoutubeFilled, MailFilled } from '@ant-design/icons';
-import { SocialItem } from '@/types/HomeTypes';
+import { SocialItem } from '@/components/home/HomeTypes';
 
 const socials: SocialItem[] = [
   {icon: <LinkedinFilled />, href: 'https://www.linkedin.com/in/lewis-broadhurst/'},
