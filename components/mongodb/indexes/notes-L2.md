@@ -1,18 +1,18 @@
 ## Create a single field index
 
-- Support queries and sorts on a single field
-- createIndex({ fieldname: 1 (ascending)}) (-1 descending)
-- To specify uniqueness... createIndex( { email: 1}, { unique: true })
+-   Support queries and sorts on a single field
+-   createIndex({ fieldname: 1 (ascending)}) (-1 descending)
+-   To specify uniqueness... createIndex( { email: 1}, { unique: true })
 
 ## Get Indexes
 
-- db.customers.getIndexes()
+-   db.customers.getIndexes()
 
 ## explain()
 
-- Explains what is happening with a specific query, can see if an index is being
-  used
-- e.g. db.customers.explain().find({})
+-   Explains what is happening with a specific query, can see if an index is
+    being used
+-   e.g. db.customers.explain().find({})
 
 ```
 The IXSCAN stage indicates the query is using an index and what index is being selected.

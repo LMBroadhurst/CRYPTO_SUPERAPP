@@ -1,26 +1,27 @@
 ## Atlas search
 
-- Relevance based search
-- Surface records based on a search term (NOT a DB search for a particular
-  record)
+-   Relevance based search
+-   Surface records based on a search term (NOT a DB search for a particular
+    record)
 
-- Starts with search indexes, used to specify how search algorithm should work.
-  Often lucene.standard
-- Not the same as db index or db search
+-   Starts with search indexes, used to specify how search algorithm should
+    work. Often lucene.standard
+-   Not the same as db index or db search
 
 ## Create search index
 
-- Defines how relevance based search should be performed
-- Dynamic Mapping: All fields indexed aside from booleans/objectIds/timestamps
-  (DEFAULT)
+-   Defines how relevance based search should be performed
+-   Dynamic Mapping: All fields indexed aside from booleans/objectIds/timestamps
+    (DEFAULT)
 
-- Index/Search analyser: DEFAULT to lucene.standard (OS relevance based search)
+-   Index/Search analyser: DEFAULT to lucene.standard (OS relevance based
+    search)
 
 ### Dynamic Mapping
 
-- If using dynamic mapping, don't need to specify field mappings, as all fields
-  will be included
-- All fields are searched upon with equal weight
+-   If using dynamic mapping, don't need to specify field mappings, as all
+    fields will be included
+-   All fields are searched upon with equal weight
 
 ## Lab 1
 
@@ -37,20 +38,20 @@
 
 ```typescript
 db.sales.aggregate([
-  {
-    $search: {
-      index: 'sample_supplies-sales-dynamic',
-      text: {
-        query: 'notepad',
-        path: {wildcard: '*'},
-      },
+    {
+        $search: {
+            index: 'sample_supplies-sales-dynamic',
+            text: {
+                query: 'notepad',
+                path: {wildcard: '*'},
+            },
+        },
     },
-  },
-  {
-    $set: {
-      score: {$meta: 'searchScore'},
+    {
+        $set: {
+            score: {$meta: 'searchScore'},
+        },
     },
-  },
 ])
 ```
 
@@ -70,19 +71,19 @@ db.sales.aggregate([
 
 ```typescript
 db.sales.aggregate([
-  {
-    $search: {
-      index: 'sample_supplies-sales-static',
-      text: {
-        query: 'London',
-        path: {wildcard: '*'},
-      },
+    {
+        $search: {
+            index: 'sample_supplies-sales-static',
+            text: {
+                query: 'London',
+                path: {wildcard: '*'},
+            },
+        },
     },
-  },
-  {
-    $set: {
-      score: {$meta: 'searchScore'},
+    {
+        $set: {
+            score: {$meta: 'searchScore'},
+        },
     },
-  },
 ])
 ```
