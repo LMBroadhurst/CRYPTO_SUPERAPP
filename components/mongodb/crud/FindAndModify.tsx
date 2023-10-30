@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const FindAndModify = () => {
   return (
@@ -17,7 +17,7 @@ const FindAndModify = () => {
         })`}
       </pre>
     </section>
-  );
-};
+  )
+}
 
-export default FindAndModify;
+export default FindAndModify

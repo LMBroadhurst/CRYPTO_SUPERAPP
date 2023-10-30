@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const UpdateOne = () => {
   return (
@@ -22,7 +22,7 @@ const UpdateOne = () => {
         )`}
       </section>
     </section>
-  );
-};
+  )
+}
 
-export default UpdateOne;
+export default UpdateOne

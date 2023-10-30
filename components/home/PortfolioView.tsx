@@ -1,14 +1,14 @@
-import React from "react";
-import ContentPreview from "../global/Card";
-import CODERCOMMERCE from "./assets/CODERCOMMERCE.png";
-import LEVELGROUND from "./assets/LEVELGROUND.png";
-import KENTCDODDS from "./assets/KENTCDODDS.png";
-import { CardContents } from "@/components/home/HomeTypes";
+import React from 'react'
+import ContentPreview from '../global/Card'
+import CODERCOMMERCE from './assets/CODERCOMMERCE.png'
+import LEVELGROUND from './assets/LEVELGROUND.png'
+import KENTCDODDS from './assets/KENTCDODDS.png'
+import {CardContents} from '@/components/home/HomeTypes'
 
 const contentToRender: CardContents[] = [
   {
-    url: "https://github.com/LMBroadhurst/kentcdodds_epic_react_course",
-    title: "Kent C Dodds - Epic React Course",
+    url: 'https://github.com/LMBroadhurst/kentcdodds_epic_react_course',
+    title: 'Kent C Dodds - Epic React Course',
     description: (
       <p>
         As I have become fluent using React, I wanted to push myself to cover
@@ -26,13 +26,13 @@ const contentToRender: CardContents[] = [
         and MSW.
       </p>
     ),
-    date: "Sep 2023",
+    date: 'Sep 2023',
     image: KENTCDODDS,
-    tags: ["Adv. React Patterns", "React Testing"],
+    tags: ['Adv. React Patterns', 'React Testing'],
   },
   {
-    url: "https://coder-commerce.netlify.app/",
-    title: "Coder Commerce",
+    url: 'https://coder-commerce.netlify.app/',
+    title: 'Coder Commerce',
     description: (
       <p>
         An E-Commerce site I built from scratch to learn more about 3rd party
@@ -46,13 +46,13 @@ const contentToRender: CardContents[] = [
         especially.
       </p>
     ),
-    date: "Sep 2022",
+    date: 'Sep 2022',
     image: CODERCOMMERCE,
-    tags: ["React", "Stripe", "Redux", "Firebase"],
+    tags: ['React', 'Stripe', 'Redux', 'Firebase'],
   },
   {
-    url: "https://psuedo-level-ground.netlify.app/",
-    title: "Level Ground MMA",
+    url: 'https://psuedo-level-ground.netlify.app/',
+    title: 'Level Ground MMA',
     description: (
       <p>
         One of the first websites I built that I was proud enough to share.
@@ -62,11 +62,11 @@ const contentToRender: CardContents[] = [
         projects due it's simplicity.
       </p>
     ),
-    date: "April 2022",
+    date: 'April 2022',
     image: LEVELGROUND,
-    tags: ["HTML", "CSS", "JS"],
+    tags: ['HTML', 'CSS', 'JS'],
   },
-];
+]
 
 const Portfolio = () => {
   return (
@@ -81,8 +81,8 @@ const Portfolio = () => {
             things I've been getting up to outside of work 😄
           </p>
 
-          {contentToRender.map((project) => {
-            const { url, title, description, date, image, tags } = project;
+          {contentToRender.map(project => {
+            const {url, title, description, date, image, tags} = project
 
             return (
               <ContentPreview
@@ -94,12 +94,12 @@ const Portfolio = () => {
                 image={image}
                 description={description}
               />
-            );
+            )
           })}
         </section>
       </section>
     </section>
-  );
-};
+  )
+}
 
-export default Portfolio;
+export default Portfolio

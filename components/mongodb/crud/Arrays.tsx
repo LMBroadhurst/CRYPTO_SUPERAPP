@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Arrays = () => {
   return (
@@ -17,7 +17,7 @@ const Arrays = () => {
         `}
       </pre>
     </section>
-  );
-};
+  )
+}
 
-export default Arrays;
+export default Arrays

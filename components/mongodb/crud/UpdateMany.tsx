@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const UpdateMany = () => {
   return (
@@ -16,7 +16,7 @@ const UpdateMany = () => {
         )`}
       </pre>
     </section>
-  );
-};
+  )
+}
 
-export default UpdateMany;
+export default UpdateMany

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, {useState} from 'react'
 
 const FindOne = () => {
   const [findOneFromCollections, setFindOneFromCollections] = useState({
     account: undefined,
     customer: undefined,
     transaction: undefined,
-  });
+  })
 
   async function handleRunFindOneRequests() {
     // const { data: account } = await axios.get("/api/accounts/getByAccountId/387877")
@@ -17,7 +17,7 @@ const FindOne = () => {
     // const { data: transaction } = await axios.get("/api/transactions/getByAccountid/996263")
     // setFindOneFromCollections({...findOneFromCollections, transaction: transaction})
 
-    console.log(findOneFromCollections);
+    console.log(findOneFromCollections)
   }
 
   return (
@@ -53,7 +53,7 @@ const FindOne = () => {
       <p>{`db.transactions.findOne({ amount: { $lte: 100 } })`}</p>
       <p>{`db.transactions.findOne({ amount: { $lte: 100 } })`}</p>
     </section>
-  );
-};
+  )
+}
 
-export default FindOne;
+export default FindOne

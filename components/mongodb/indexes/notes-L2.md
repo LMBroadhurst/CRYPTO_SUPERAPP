@@ -10,7 +10,8 @@
 
 ## explain()
 
-- Explains what is happening with a specific query, can see if an index is being used
+- Explains what is happening with a specific query, can see if an index is being
+  used
 - e.g. db.customers.explain().find({})
 
 ```

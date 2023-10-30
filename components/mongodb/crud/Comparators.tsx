@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Comparators = () => {
   return (
@@ -25,7 +25,7 @@ const Comparators = () => {
         <ul>$nin: Matches none of the values specified in an array</ul>
       </li>
     </section>
-  );
-};
+  )
+}
 
-export default Comparators;
+export default Comparators

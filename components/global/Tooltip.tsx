@@ -1,10 +1,10 @@
-import React, { FC, PropsWithChildren, ReactNode } from "react";
+import React, {FC, PropsWithChildren, ReactNode} from 'react'
 
 type OwnProps = PropsWithChildren & {
-  tooltipText: string;
-};
+  tooltipText: string
+}
 
-const Tooltip: FC<OwnProps> = ({ tooltipText, children }) => {
+const Tooltip: FC<OwnProps> = ({tooltipText, children}) => {
   return (
     <>
       {/* Section that is wrapped by the tooltip */}
@@ -12,7 +12,7 @@ const Tooltip: FC<OwnProps> = ({ tooltipText, children }) => {
         <section>{children}</section>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Tooltip;
+export default Tooltip

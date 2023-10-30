@@ -1,15 +1,15 @@
-import { StaticImageData } from "next/image";
-import React, { FC } from "react";
-import Chip from "../global/Chip";
+import {StaticImageData} from 'next/image'
+import React, {FC} from 'react'
+import Chip from '../global/Chip'
 
 type OwnProps = {
-  url: string;
-  title: string;
-  description: string;
-  image: StaticImageData;
-  date: string;
-  tags: string[];
-};
+  url: string
+  title: string
+  description: string
+  image: StaticImageData
+  date: string
+  tags: string[]
+}
 
 const YoutubePreview: FC<OwnProps> = ({
   url,
@@ -38,7 +38,7 @@ const YoutubePreview: FC<OwnProps> = ({
             <span className="text-sm text-slate-500">{date}</span>
 
             <section className="flex flex-row justify-end gap-2">
-              {tags.map((tag) => (
+              {tags.map(tag => (
                 <Chip key={tag} bgColour="bg-sky-800">
                   {tag}
                 </Chip>
@@ -48,7 +48,7 @@ const YoutubePreview: FC<OwnProps> = ({
         </section>
       </section>
     </a>
-  );
-};
+  )
+}
 
-export default YoutubePreview;
+export default YoutubePreview

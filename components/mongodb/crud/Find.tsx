@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Find = () => {
   return (
@@ -16,7 +16,7 @@ const Find = () => {
       <p>{`db.transactions.find({ bank: 'Santander', amount: { $gt: 1000 } })`}</p>
       <p>{`db.transactions.find({ amount: { $eq: 100 } })`}</p>
     </section>
-  );
-};
+  )
+}
 
-export default Find;
+export default Find

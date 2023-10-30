@@ -1,6 +1,6 @@
-import React from "react";
-import Head from "next/head";
-import Introduction from "@/components/home/IntroductionView";
+import React from 'react'
+import Head from 'next/head'
+import Introduction from '@/components/home/IntroductionView'
 
 export default function Home() {
   return (
@@ -15,5 +15,5 @@ export default function Home() {
         <Introduction />
       </main>
     </>
-  );
+  )
 }

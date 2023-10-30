@@ -34,5 +34,6 @@
 
 ## Example
 
-- We have a common query that is run e.g. finding if an accounts collections documents are active db.accounts.find({ active: true, account: '1241'})
+- We have a common query that is run e.g. finding if an accounts collections
+  documents are active db.accounts.find({ active: true, account: '1241'})
 - This is a good candidate for a compound index on active & account

@@ -1,7 +1,8 @@
 ## Aggergation
 
 - Analysis and summary of data, doesn't impact origin data
-- Stage: aggregation operation performed on the data, single operation on the data
+- Stage: aggregation operation performed on the data, single operation on the
+  data
 - Aggregation Pipeline: Series of stages completed one at a time, in order
 - Output from each stage becomes input for the next stage
 

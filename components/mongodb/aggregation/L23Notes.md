@@ -1,7 +1,8 @@
 ## $match
 
 - Filter for documents matching criteria
-- Place as early in aggregation pipeline as possible, reduces the number of documents
+- Place as early in aggregation pipeline as possible, reduces the number of
+  documents
 
 ## $group
 

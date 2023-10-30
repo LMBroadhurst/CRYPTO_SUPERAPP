@@ -1,18 +1,18 @@
-import Chip from "@/components/global/Chip";
-import React from "react";
+import Chip from '@/components/global/Chip'
+import React from 'react'
 
 const technologies = [
-  "React",
-  "TypeScript",
-  "Redux",
-  "Java",
-  "SQL",
-  "Styled Components",
-  "AWS",
-  "Protobuf",
-  "FIX",
-  "CentOS/Linux",
-];
+  'React',
+  'TypeScript',
+  'Redux',
+  'Java',
+  'SQL',
+  'Styled Components',
+  'AWS',
+  'Protobuf',
+  'FIX',
+  'CentOS/Linux',
+]
 
 const MahiMarkets = () => {
   return (
@@ -82,7 +82,7 @@ const MahiMarkets = () => {
       <section className="flex flex-col gap-4 py-2">
         <section>
           <ul className="flex flex-row gap-3 flex-wrap justify-center">
-            {technologies.map((tech) => (
+            {technologies.map(tech => (
               <Chip key={tech} bgColour="bg-cyan-900">
                 {tech}
               </Chip>
@@ -91,7 +91,7 @@ const MahiMarkets = () => {
         </section>
       </section>
     </section>
-  );
-};
+  )
+}
 
-export default MahiMarkets;
+export default MahiMarkets

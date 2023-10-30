@@ -10,7 +10,9 @@
 - Specifies the weight of the field
 - must, must not, should clauses
 - also filter
-- The compound operator combines multiple search clauses to return the most relevantresults and assigns weights to documents with qualities that you want to appear higher in search results.
+- The compound operator combines multiple search clauses to return the most
+  relevantresults and assigns weights to documents with qualities that you want
+  to appear higher in search results.
 
 ```typescript
 
@@ -47,22 +49,22 @@ $search: {
 db.sales.aggregate([
   {
     $search: {
-      index: "sample_supplies-sales-dynamic",
+      index: 'sample_supplies-sales-dynamic',
       compound: {
         filter: [
           {
             text: {
-              query: "Online",
-              path: "purchaseMethod",
+              query: 'Online',
+              path: 'purchaseMethod',
             },
           },
         ],
         should: [
           {
             text: {
-              query: "notepad",
-              path: "items.name",
-              score: { constant: { value: 5 } },
+              query: 'notepad',
+              path: 'items.name',
+              score: {constant: {value: 5}},
             },
           },
         ],
@@ -71,10 +73,10 @@ db.sales.aggregate([
   },
   {
     $project: {
-      "items.name": 1,
+      'items.name': 1,
       purchaseMethod: 1,
-      score: { $meta: "searchScore" },
+      score: {$meta: 'searchScore'},
     },
   },
-]);
+])
 ```

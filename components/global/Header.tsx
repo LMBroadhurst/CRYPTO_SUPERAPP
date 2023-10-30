@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Header = () => {
   return (
@@ -12,7 +12,7 @@ const Header = () => {
           target="_blank"
           className="text-orange-400 transition-colors duration-500 hover:cursor-pointer hover:text-orange-300"
         >
-          {" "}
+          {' '}
           MahiMarkets
         </a>
       </h2>
@@ -22,7 +22,7 @@ const Header = () => {
         businesses and customers.
       </p>
     </section>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

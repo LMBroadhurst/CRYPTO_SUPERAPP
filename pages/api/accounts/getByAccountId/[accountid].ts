@@ -1,26 +1,26 @@
-import { NextApiRequest } from "next";
-import clientPromise from "../../../../lib/mongodb";
+import {NextApiRequest} from 'next'
+import clientPromise from '../../../../lib/mongodb'
 
 export default async function (req: NextApiRequest, res: any) {
   // Need zod to parse the input query
-  const { accountid } = req.query;
+  const {accountid} = req.query
   const query = {
     account_id: 387877,
-  };
+  }
 
   try {
-    const client = await clientPromise;
-    const db = client.db("sample_analytics");
+    const client = await clientPromise
+    const db = client.db('sample_analytics')
 
     const account = await db
-      .collection("accounts")
+      .collection('accounts')
       .findOne(query)
-      .then((res) => res);
+      .then(res => res)
 
-    console.log(account);
+    console.log(account)
 
-    return res.json(account);
+    return res.json(account)
   } catch (e) {
-    console.error(e);
+    console.error(e)
   }
 }

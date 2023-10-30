@@ -1,16 +1,16 @@
-import React, { FC } from "react";
-import { StaticImageData } from "next/image";
-import Chip from "./Chip";
-import Link from "next/link";
+import React, {FC} from 'react'
+import {StaticImageData} from 'next/image'
+import Chip from './Chip'
+import Link from 'next/link'
 
 type OwnProps = {
-  url: string;
-  title: string;
-  description: React.ReactNode;
-  image: StaticImageData;
-  date: string;
-  tags: string[];
-};
+  url: string
+  title: string
+  description: React.ReactNode
+  image: StaticImageData
+  date: string
+  tags: string[]
+}
 
 const ContentPreview: FC<OwnProps> = ({
   url,
@@ -38,7 +38,7 @@ const ContentPreview: FC<OwnProps> = ({
           <section className="flex flex-col-reverse gap-2 justify-between items-center sm:flex-row">
             <span className="text-sm">{date}</span>
             <section className="flex flex-row justify-end gap-2 text-slate-200 font-medium">
-              {tags.map((tag) => (
+              {tags.map(tag => (
                 <Chip key={tag} bgColour="bg-sky-800">
                   {tag}
                 </Chip>
@@ -48,7 +48,7 @@ const ContentPreview: FC<OwnProps> = ({
         </section>
       </section>
     </Link>
-  );
-};
+  )
+}
 
-export default ContentPreview;
+export default ContentPreview

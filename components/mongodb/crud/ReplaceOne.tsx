@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const ReplaceOne = () => {
   return (
@@ -24,7 +24,7 @@ const ReplaceOne = () => {
             )`}
       </pre>
     </section>
-  );
-};
+  )
+}
 
-export default ReplaceOne;
+export default ReplaceOne

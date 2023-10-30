@@ -5,12 +5,12 @@
 
 ## Explain
 
-`db.collection.explain()...`
-3 Parameters:
+`db.collection.explain()...` 3 Parameters:
 
 - 'queryPanner': default verbosity mode
 - 'executionStats': more information about index/query
-- 'allPlansExecution': shows different plans with scores on how efficient they are
+- 'allPlansExecution': shows different plans with scores on how efficient they
+  are
 
-Explain shows different plans that can be used to retrive the data.
-The winning plan is the chosen path.
+Explain shows different plans that can be used to retrive the data. The winning
+plan is the chosen path.

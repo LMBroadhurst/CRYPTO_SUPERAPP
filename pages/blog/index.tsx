@@ -1,5 +1,5 @@
-import BlogArticleCard from "@/components/blog/BlogArticleCard";
-import React from "react";
+import BlogArticleCard from '@/components/blog/BlogArticleCard'
+import React from 'react'
 
 const index = () => {
   return (
@@ -25,7 +25,7 @@ const index = () => {
         </section>
       </section>
     </main>
-  );
-};
+  )
+}
 
-export default index;
+export default index

@@ -1,16 +1,16 @@
-import React from "react";
-import Chip from "@/components/global/Chip";
+import React from 'react'
+import Chip from '@/components/global/Chip'
 
 const technologies = [
-  "SQL",
-  "Ansible",
-  "Java",
-  "XML/MDML",
-  "UNIX",
-  "React",
-  "JavaScript",
-  "Spring Boot",
-];
+  'SQL',
+  'Ansible',
+  'Java',
+  'XML/MDML',
+  'UNIX',
+  'React',
+  'JavaScript',
+  'Spring Boot',
+]
 
 const BNTA = () => {
   return (
@@ -67,8 +67,8 @@ const BNTA = () => {
       <section className="flex flex-col gap-4 py-2">
         <section>
           <ul className="flex flex-row gap-3 flex-wrap justify-center">
-            {technologies.map((tech) => (
-              <Chip key={tech} bgColour={"bg-cyan-900"}>
+            {technologies.map(tech => (
+              <Chip key={tech} bgColour={'bg-cyan-900'}>
                 {tech}
               </Chip>
             ))}
@@ -76,7 +76,7 @@ const BNTA = () => {
         </section>
       </section>
     </section>
-  );
-};
+  )
+}
 
-export default BNTA;
+export default BNTA

@@ -1,8 +1,8 @@
-"use client";
-import Comparators from "@/components/mongodb/crud/Comparators";
-import FindOne from "@/components/mongodb/crud/Find";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+'use client'
+import Comparators from '@/components/mongodb/crud/Comparators'
+import FindOne from '@/components/mongodb/crud/Find'
+import axios from 'axios'
+import React, {useEffect, useState} from 'react'
 
 const index = () => {
   async function callApi() {
@@ -22,7 +22,7 @@ const index = () => {
 
       <Comparators />
     </main>
-  );
-};
+  )
+}
 
-export default index;
+export default index

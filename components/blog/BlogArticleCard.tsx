@@ -1,6 +1,6 @@
-import Image from "next/image";
-import React from "react";
-import X from "/components/home/assets/ERC20.webp";
+import Image from 'next/image'
+import React from 'react'
+import X from '/components/home/assets/ERC20.webp'
 
 const BlogArticleCard = () => {
   return (
@@ -25,7 +25,7 @@ const BlogArticleCard = () => {
         width={200}
       />
     </section>
-  );
-};
+  )
+}
 
-export default BlogArticleCard;
+export default BlogArticleCard
