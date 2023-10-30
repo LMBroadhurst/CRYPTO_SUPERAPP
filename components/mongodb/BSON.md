@@ -1,4 +1,5 @@
 ## Data Types
+
 - Double
 - String
 - Object

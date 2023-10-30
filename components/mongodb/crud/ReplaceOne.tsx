@@ -1,15 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const ReplaceOne = () => {
+  return (
+    <section>
+      <div>ReplaceOne</div>
+      <p>3 parameters, filter - replacement - options</p>
 
-
-    return <section>
-        <div>ReplaceOne</div>
-        <p>3 parameters, filter - replacement - options</p>
-
-        <h2>Example Query</h2>
-        <pre>
-            {`db.books.replaceOne(
+      <h2>Example Query</h2>
+      <pre>
+        {`db.books.replaceOne(
                 {
                     _id: ObjectId("6282afeb441a74a98dbbec4e"),
                 },
@@ -22,9 +21,10 @@ const ReplaceOne = () => {
                     authors: ["David Paper"],
                     categories: ["Data Science"],
                 }
-            )`}       
-        </pre>
+            )`}
+      </pre>
     </section>
-}
+  );
+};
 
-export default ReplaceOne
+export default ReplaceOne;

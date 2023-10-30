@@ -1,6 +1,6 @@
-import { StaticImageData } from 'next/image';
-import React, { FC } from 'react'
-import Chip from '../global/Chip';
+import { StaticImageData } from "next/image";
+import React, { FC } from "react";
+import Chip from "../global/Chip";
 
 type OwnProps = {
   url: string;
@@ -9,7 +9,7 @@ type OwnProps = {
   image: StaticImageData;
   date: string;
   tags: string[];
-}
+};
 
 const YoutubePreview: FC<OwnProps> = ({
   url,
@@ -17,51 +17,38 @@ const YoutubePreview: FC<OwnProps> = ({
   description,
   image,
   date,
-  tags
+  tags,
 }) => {
-  
   return (
-    <a 
-        className='self-stretch'
-        href={url}
-        target='_blank'
-    >
-        <section 
-            className='
+    <a className="self-stretch" href={url} target="_blank">
+      <section
+        className="
                 flex flex-row justify-between items-center gap-8 rounded-lg p-4 bg-blue-700
                 transition-all duration-500 bg-opacity-10 shadow-md shadow-sky-700
-                hover:cursor-pointer hover:shadow-sky-400 hover:bg-gray-900'
-        >
-            <section className='flex flex-col gap-4'>
-                <h3 className='text-lg sm:text-xl text-slate-200'>{title}</h3>
+                hover:cursor-pointer hover:shadow-sky-400 hover:bg-gray-900"
+      >
+        <section className="flex flex-col gap-4">
+          <h3 className="text-lg sm:text-xl text-slate-200">{title}</h3>
 
-                <p className='text-slate-500'>{description}</p>
+          <p className="text-slate-500">{description}</p>
 
-                <img 
-                    src={image?.src} 
-                    alt=''
-                    className='rounded-md'
-                />
+          <img src={image?.src} alt="" className="rounded-md" />
 
-                <section className='flex flex-col-reverse gap-2 justify-between items-center sm:flex-row'>
-                  <span className='text-sm text-slate-500'>{date}</span>
+          <section className="flex flex-col-reverse gap-2 justify-between items-center sm:flex-row">
+            <span className="text-sm text-slate-500">{date}</span>
 
-                  <section className='flex flex-row justify-end gap-2'>
-                    {
-                        tags.map(tag => 
-                            <Chip 
-                              key={tag}
-                              bgColour='bg-sky-800'
-                            >
-                                {tag}
-                            </Chip>)
-                    }
-                  </section>
-                </section>
+            <section className="flex flex-row justify-end gap-2">
+              {tags.map((tag) => (
+                <Chip key={tag} bgColour="bg-sky-800">
+                  {tag}
+                </Chip>
+              ))}
             </section>
+          </section>
         </section>
+      </section>
     </a>
-  )
-}
+  );
+};
 
-export default YoutubePreview
+export default YoutubePreview;

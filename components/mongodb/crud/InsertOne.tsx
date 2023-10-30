@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const InsertOne = () => {
-  return (
-    <div>InsertOne</div>
-  )
-}
+  return <div>InsertOne</div>;
+};
 
-export default InsertOne
+export default InsertOne;
