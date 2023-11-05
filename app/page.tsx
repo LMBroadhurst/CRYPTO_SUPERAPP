@@ -4,7 +4,6 @@ import Header from '@/components/global/Header'
 import Navigation, { NavigationTabs } from '@/components/global/Navigation'
 import Socials from '@/components/global/Socials'
 import AboutMeView from '@/components/home/AboutMeView'
-import { Content } from 'next/font/google'
 import PortfolioView from '@/components/home/PortfolioView'
 import ContentView from '@/components/home/ContentView'
 
