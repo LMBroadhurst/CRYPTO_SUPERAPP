@@ -1,9 +1,10 @@
 import { NextApiRequest } from 'next'
 import clientPromise from '../../../../lib/mongodb'
+import { NextRequest, NextResponse } from 'next/server'
 
-export async function GET(req: NextApiRequest, res: any) {
+export async function GET(req: NextRequest, res: NextResponse) {
     // Need zod to parse the input query
-    const { accountid } = req.query
+    // const { accountid } = req.query
     const query = {
         account_id: 996263,
     }
@@ -19,7 +20,7 @@ export async function GET(req: NextApiRequest, res: any) {
 
         console.log(account)
 
-        return res.json(account)
+        return NextResponse.json(account)
     } catch (e) {
         console.error(e)
     }

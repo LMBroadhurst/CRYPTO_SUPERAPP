@@ -1,7 +1,7 @@
 import clientPromise from '@/lib/mongodb'
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 
-export async function GET(req: any) {
+export async function GET(req: NextRequest, res: NextResponse) {
     try {
         const client = await clientPromise
         const db = client.db('sample_analytics')

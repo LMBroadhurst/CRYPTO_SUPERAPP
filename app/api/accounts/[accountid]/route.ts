@@ -1,7 +1,7 @@
 import clientPromise from '../../../../lib/mongodb'
 import { NextRequest, NextResponse } from 'next/server'
 
-export async function GET(req: NextRequest, res: any) {
+export async function GET(req: NextRequest, res: NextResponse) {
     // Need zod to parse the input query
     // const { accountid } = req.query
     const query = {
