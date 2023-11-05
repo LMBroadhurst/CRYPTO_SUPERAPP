@@ -1,29 +1,26 @@
-import BlogArticleCard from '@/components/blog/BlogArticleCard'
-import React from 'react'
+'use client'
+import Comparators from '@/components/mongodb/crud/Comparators'
+import FindOne from '@/components/mongodb/crud/Find'
+import axios from 'axios'
+import React, {useEffect, useState} from 'react'
 
 const index = () => {
-    return (
-        <main className="bg-slate-900 text-slate-200">
-            <section className="flex flex-col gap-10 mx-auto md:p-20 lg:w-[800px]">
-                <div className="flex flex-col items-start">
-                    <h1 className="text-4xl font-medium">Lewis' Blog</h1>
-                    <span className="text-xl text-slate-400">
-                        Ramblings of a full stack engineer
-                    </span>
-                    <span className=" text-slate-600 hover:text-orange-400 hover:cursor-pointer">
-                        About me
-                    </span>
-                </div>
+    async function callApi() {
+        // const { data: accounts } = await axios.get("/api/accounts/getAll")
+        // console.log(accounts)
+        // const { data: transactions } = await axios.get("/api/transactions/getAll")
+        // console.log(transactions)
+        // const { data: customers } = await axios.get("/api/customers/getAll")
+        // console.log(customers)
+    }
 
-                <section className="flex flex-col gap-4">
-                    <BlogArticleCard />
-                    <BlogArticleCard />
-                    <BlogArticleCard />
-                    <BlogArticleCard />
-                    <BlogArticleCard />
-                    <BlogArticleCard />
-                </section>
-            </section>
+    return (
+        <main>
+            <h1>MongoDB Node.JS Path Basics</h1>
+
+            <FindOne />
+
+            <Comparators />
         </main>
     )
 }

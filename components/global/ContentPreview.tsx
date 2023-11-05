@@ -1,5 +1,5 @@
-import React, {FC} from 'react'
-import {StaticImageData} from 'next/image'
+import React, { FC } from 'react'
+import { StaticImageData } from 'next/image'
 import Chip from './Chip'
 import Link from 'next/link'
 
@@ -33,7 +33,7 @@ const ContentPreview: FC<OwnProps> = ({
                         {title}
                     </h3>
 
-                    <p className="">{description}</p>
+                    <section>{description}</section>
 
                     <img src={image?.src} alt="" className="rounded-md" />
 
