@@ -1,7 +1,8 @@
 import BlogArticleCard from '@/components/blog/BlogArticleCard'
 import React from 'react'
 
-const index = () => {
+export default function index() {
+
     return <main className="bg-slate-900 text-slate-200">
         <section className="flex flex-col gap-10 mx-auto md:p-20 lg:w-[800px]">
             <div className="flex flex-col items-start">
@@ -25,5 +26,3 @@ const index = () => {
         </section>
     </main>
 }
-
-export default index
