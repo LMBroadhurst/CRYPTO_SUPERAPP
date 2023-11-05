@@ -1,9 +1,9 @@
-import {NextApiRequest} from 'next'
+import { NextApiRequest } from 'next'
 import clientPromise from '../../../../lib/mongodb'
 
-export default async function (req: NextApiRequest, res: any) {
+export async function GET(req: NextApiRequest, res: any) {
     // Need zod to parse the input query
-    const {accountid} = req.query
+    const { accountid } = req.query
     const query = {
         account_id: 996263,
     }

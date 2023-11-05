@@ -1,8 +1,8 @@
-import {NextApiRequest} from 'next'
+import { NextApiRequest } from 'next'
 import clientPromise from '../../../../lib/mongodb'
 
-export default async function (req: NextApiRequest, res: any) {
-    const {username} = req.query
+export async function GET(req: NextApiRequest, res: any) {
+    const { username } = req.query
 
     try {
         const client = await clientPromise
@@ -10,7 +10,7 @@ export default async function (req: NextApiRequest, res: any) {
 
         const account = await db
             .collection('customers')
-            .findOne({username: username})
+            .findOne({ username: username })
             .then(res => res)
 
         return res.json(account)
