@@ -21,6 +21,6 @@ export async function GET(req: NextRequest, res: NextResponse) {
 
         return NextResponse.json(account)
     } catch (e) {
-        console.error(e)
+        return NextResponse.json(e)
     }
 }
