@@ -35,6 +35,8 @@ await collection.insertMany({}, {}, {}, {})
 ```
 
 ## Identify the correct syntax for the XX driver to update one document and to update many documents.
+await collection.updateOne({ name: "Lewis", age: 28 }, { name: "UpdatedLewis" })
+await collection.insertMany({ age: 28 }, { age: 29 })
 
 ## Identify the correct syntax for the XX driver to create an aggregation pipeline
 
