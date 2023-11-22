@@ -4,12 +4,13 @@ import CODERCOMMERCE from './assets/CODERCOMMERCE.png'
 import LEVELGROUND from './assets/LEVELGROUND.png'
 import KENTCDODDS from './assets/KENTCDODDS.png'
 import PYTHONTRADINGBOT from './assets/PYTHONTRADINGBOT.jpg'
+import FUNAT5 from './assets/FUNAT5.png'
 import { CardContents } from '@/components/home/HomeTypes'
 
 const contentToRender: CardContents[] = [
     {
-        url: '',
-        title: 'This Portfolio',
+        url: 'https://github.com/LMBroadhurst/algobot_statistical_finance_dashboard',
+        title: 'Trading Bot with Python',
         description: (
             <p>
                 Due to my interest in FX trading and engineering, I decided to
@@ -25,6 +26,30 @@ const contentToRender: CardContents[] = [
         date: 'Jan 2023',
         image: PYTHONTRADINGBOT,
         tags: ['Python', 'DSA', 'Pandas', 'Jupyter Notebooks'],
+    },
+    {
+        url: 'https://funatfive.netlify.app/',
+        title: 'Fun@5: 6 Week Hackathon',
+        description: (
+            <p>
+                Tasked with building an app that would improve DEI in the workspace, I worked in a team of 3 to build
+                an app that would allow colleagues to vote on ideas for social events. The app would then anonymously
+                tally the results and choose the most popular option.
+                <br />
+                <br />
+                I was responsible for building the React front end and designing the website. Turns out UX design is really
+                hard, I took an Udemy course on UX/UI design alongside this project to give me a much needed hand.
+                <br />
+                <br />
+                <span className='text-xs'>
+                    Note this is statically hosted and is not connected to the server. The login/register
+                    functionality will not work.
+                </span>
+            </p>
+        ),
+        date: 'Autumn 2022',
+        image: FUNAT5,
+        tags: ['React', 'JS/HTML/CSS', 'Tailwind'],
     },
     {
         url: 'https://github.com/LMBroadhurst/kentcdodds_epic_react_course',
