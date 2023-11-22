@@ -3,9 +3,29 @@ import ContentPreview from '../global/ContentPreview'
 import CODERCOMMERCE from './assets/CODERCOMMERCE.png'
 import LEVELGROUND from './assets/LEVELGROUND.png'
 import KENTCDODDS from './assets/KENTCDODDS.png'
+import PYTHONTRADINGBOT from './assets/PYTHONTRADINGBOT.jpg'
 import { CardContents } from '@/components/home/HomeTypes'
 
 const contentToRender: CardContents[] = [
+    {
+        url: '',
+        title: 'This Portfolio',
+        description: (
+            <p>
+                Due to my interest in FX trading and engineering, I decided to
+                spend some of my free time learning how to build algorithmic trading
+                bots with python. Using the OANDA API, I was able to gain access to historical data to
+                backtest typical retail trading strategies and run a trading bot.
+                <br />
+                <br />
+                Seeing a bot take paper trades for me was really cool (although not profitable 😅) and
+                writing my own strategies really pushed my DSA skills.
+            </p>
+        ),
+        date: 'Jan 2023',
+        image: PYTHONTRADINGBOT,
+        tags: ['Python', 'DSA', 'Pandas', 'Jupyter Notebooks'],
+    },
     {
         url: 'https://github.com/LMBroadhurst/kentcdodds_epic_react_course',
         title: 'Kent C Dodds - Epic React Course',

@@ -6,6 +6,7 @@ Improve query performance: reduce disk I/O and resources required.
 
 Come with a write performance cost.
 Write performs can degrade if we have too many indexes.
+Every query should come with an index.
 
 ## w/o indexes
 MongoDB needs to read all documents (COLLSCAN).

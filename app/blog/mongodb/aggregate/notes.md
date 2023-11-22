@@ -13,55 +13,6 @@ To run an aggregation pipeline, use:
 
 db.collection.aggregate() or
 
-aggregate
-
-### Arithmetic Expression Operators
-Here if you see something that you don't recognise but looks sensible in exam, assume it is valid.
-Examples: 
-- $abs (returns absolute value)
-- $ceil (rounds up to largest possible integer, if negative -1.8 => -1)
-- $sqrt
-- $trunc (truncates decimal to whole number)
-
-### Array Expression
-- $in (pretty common)
-- $concatArrays
-- $map
-- $size
-- $slice
-
-### Bitwise Operators
-- $bitAnd
-- $bitNot
-- $bitOr
-- $bitXor
-
-### Boolean Expression Operators
-- $and
-- $not
-- $or
-
-### Comparison Expression Operators
-- $cmp
-- $eq / $ne
-- $gt / $gte
-- $lt / $lte
-
-### Date Expression
-$month // $minute // $$etcetcetc
-
-### String Expression
-$concat // $dateFromString // $split
-
-### Trigonometry Expression
-$sin // $tan // $cosh // $etcetcetc
-
-### Type Expression
-$isNumber // $toBool
-
-### Accumulators
-$count // $sum // $etcetcetc
-
 ## Stages
 
 ### $match
@@ -91,6 +42,7 @@ $count // $sum // $etcetcetc
 In code this looks like...
 
 ```javascript
+
 const pipeline = [
   // Stage 1: match the accounts with a balance greater than $1,000
   { $match: { balance: { $lt: 1000 } } },
@@ -114,25 +66,11 @@ const pipeline = [
     },
   }
 ]
-```
 
-```javascript
-const main = async () => {
-  try {
-    await client.connect()
-    console.log(`Connected to the database 🌍. \nFull connection string: ${safeURI}`)
-    let result = await accountsCollection.aggregate(pipeline)
-    for await (const doc of result) {
-      console.log(doc)
-    }
-  } catch (err) {
-    console.error(`Error connecting to the database: ${err}`)
-  } finally {
-    await client.close()
-  }
-}
+await client.connect()
+console.log(`Connected to the database 🌍. Full connection string: ${safeURI}`)
+let result = await accountsCollection.aggregate(pipeline)
 
-main()
 ```
 
 ## Limitiations
@@ -144,3 +82,36 @@ BSON-document size limit
  of 16 megabytes.
 
 Pipeline stages have a memory limit of 100 megabytes by default.
+
+## $count
+Counts documents in the pipeline and returns total.
+
+## $out
+Writes documents that are returned from a pipeline into an existing collection.
+Must be the last stage.
+Creates a new collection if one doesn't exist, or overwrites previous collection.
+Can provide the db and collection names, will create both if none exist.
+Or just provide a name and that will create new collection in the same db.
+
+## $project
+Determines the output shape of the data.
+Usually last stage of the output.
+Can either be inclusion or exclusion, 1 for include 0 for exclude.
+
+## $set
+Adds or modifys fields in the pipeline.
+e.g. `$set: { inBaseQuantity: $multiply: [0.98, "$chf_position"]}`
+
+## field paths
+This is a field path. It refers to the value from the $first_name key.
+e.g. `$set : { username: $concat: ["$first_name", "$last_name"] }`
+
+## match group sort and limit
+```javascript
+db.zips.aggregate([
+    { $match: { state: "CA"} },
+    { $group: { _id: "$city", totalZips: { $count : { } } } },
+    { $sort: { "totalZips": 1 } },
+    { $limit: 5 }
+])
+```
