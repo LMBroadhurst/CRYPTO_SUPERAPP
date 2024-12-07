@@ -26,7 +26,7 @@ const navTabs: NavigationTabs[] = [
 
 const socials: SocialItem[] = [
     { icon: <LinkedinFilled />, href: 'https://www.linkedin.com/in/lewis-broadhurst/' },
-    { icon: <GithubOutlined />, href: 'https://github.com/LMBroadhurst' },
+    { icon: <GithubOutlined />, href: 'https://github.com/LewisBroadhurst' },
     { icon: <YoutubeFilled />, href: 'https://www.youtube.com/channel/UCv8iDXiyBoaNRtPmFt-fOYw' },
     { icon: <MediumSquareFilled />, href: 'https://medium.com/@lewis1broadhurst' },
 ]
