@@ -5,7 +5,6 @@ import Navigation, { NavigationTabs } from '@/components/global/Navigation'
 import AboutMeView from '@/components/home/AboutMeView'
 import PortfolioView from '@/components/home/PortfolioView'
 import ContentView from '@/components/home/ContentView'
-import { CoffeeOutlined } from '@ant-design/icons'
 
 export default function page() {
 
@@ -20,11 +19,11 @@ export default function page() {
             </section>
 
             <section className="">
-                {(activeTabKey === NavigationTabs.HOME && <AboutMeView />) ||
-                    (activeTabKey === NavigationTabs.PORTFOLIO && (
-                        <PortfolioView />
-                    )) ||
-                    (activeTabKey === NavigationTabs.BLOG && <ContentView />)}
+                {
+                    (activeTabKey === NavigationTabs.HOME && <AboutMeView />) ||
+                    (activeTabKey === NavigationTabs.PORTFOLIO && <PortfolioView />) ||
+                    (activeTabKey === NavigationTabs.BLOG && <ContentView />)
+                }
             </section>
         </section>
     </main>

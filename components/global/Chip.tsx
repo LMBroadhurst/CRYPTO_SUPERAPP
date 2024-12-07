@@ -7,7 +7,7 @@ type OwnProps = {
 
 const Chip: FC<OwnProps> & PropsWithChildren = ({children, bgColour}) => {
     return (
-        <section className={`p-2 px-4 rounded-full text-xs ${bgColour}`}>
+        <section className={`p-1 px-2 rounded-3xl text-xs ${bgColour}`}>
             {children}
         </section>
     )
