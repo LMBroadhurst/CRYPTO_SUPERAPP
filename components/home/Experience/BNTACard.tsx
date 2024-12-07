@@ -22,17 +22,9 @@ const BNTA = () => {
             </section>
 
             <ul className="list-disc list-outside px-6 flex flex-col gap-2 text-slate-400">
-                <li>
-                    Concise point 1...
-                </li>
-
-                <li>
-                    Concise point 2...
-                </li>
-
-                <li>
-                    Concise point 3...
-                </li>
+                <li>Built a csv transformation interface that outputs relevant data in an .mdml format on UNIX for our Murex platform, translating data from sources such as Refinitiv.</li>
+                <li>Troubleshooting & re-writing SQL queries to understand the edge cases in which unexpected trades passed through to our system.</li>
+                <li>Completed an intensive 12 week training course covering React, Javascript, Java, Spring Boot, PostgreSQL, Git/GitHub.</li>
             </ul>
 
             <ul className="flex flex-row gap-3 flex-wrap">

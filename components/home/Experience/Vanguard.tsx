@@ -21,17 +21,9 @@ const Vanguard = () => {
         </section>
 
         <ul className="list-disc list-outside pl-6 flex flex-col gap-2 text-slate-400">
-            <li>
-                Concise point 1...
-            </li>
-
-            <li>
-                Concise point 2...
-            </li>
-
-            <li>
-                Concise point 3...
-            </li>
+            <li>Builing requirements for the Java service, e.g. improving settlement date logic to implement updates received from data providers and calculating dynamic benchmarks for the funds to follow intraday. </li>
+            <li>Integration and unit testing all functionality with Spock and Groovy for the service, cypress and vitest for the client.</li>
+            <li>Bulding UI features in the Vue client, aided by the PrimeVue component library and PrimeFlex css utility library.</li>
         </ul>
 
         <ul className="flex flex-row gap-3 flex-wrap">

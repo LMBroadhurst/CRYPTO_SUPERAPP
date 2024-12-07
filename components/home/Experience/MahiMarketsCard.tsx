@@ -22,17 +22,9 @@ const MahiMarkets = () => {
             </section>
 
             <ul className="list-disc list-outside px-6 flex flex-col gap-2 text-slate-400">
-                <li>
-                    Concise point 1...
-                </li>
-
-                <li>
-                    Concise point 2...
-                </li>
-
-                <li>
-                    Concise point 3...
-                </li>
+                <li>Shipping features via a Typescript, Redux, & React client, including order blotters and promotional websites.</li>
+                <li>Building FIX adaptors and REST APIs, testing inbound/outbound FIX connections with clients.</li>
+                <li>Rotational support duty, working on call for 12hr shifts.</li>
             </ul>
 
             <ul className="flex flex-row gap-3">
