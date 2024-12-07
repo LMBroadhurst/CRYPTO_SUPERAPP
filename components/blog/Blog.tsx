@@ -71,14 +71,8 @@ const publishedContentPreview: CardContents[] = [
         title: 'Tailwind CSS Tutorial',
         description: (
             <p>
-                Ever found yourself overwriting CSS styling by adding another
-                CSS class to an already bloated CSS file with higher
-                specificity, whilst not being able to touch the old class in
-                case of a website wide disaster? `!important` everything and
-                hope for the best? Say hello to Tailwind, a utility first CSS
-                framework, where you write CSS within your HTML/HTML equivalent
-                file. In this 90min tutorial, I recreate a basic website from my
-                bootcamp using HTML, Tailwind, and a little JS.
+                Tailwind is a utility first styling framework, allowing you confine your CSS to your HTML equivalent file (basically direct inline styling but a whole lot better). 
+                In this 90min tutorial, I recreate a basic website from my coding bootcamp using HTML, Tailwind, and a little JS.
             </p>
         ),
         date: 'Aug 5th 2022',
@@ -100,52 +94,7 @@ const ContentView = () => {
         />
     ))
 
-    return (
-        <section className="flex flex-col">
-            <section className="flex flex-col gap-2 text-justify">
-                <h2 className="text-2xl self-start">Blog</h2>
-
-                <section className="flex flex-col gap-5 text-justify">
-                    <p className="text-slate-400">
-                        Since becoming a software engineer I have created a
-                        range of content, ranging from{' '}
-                        <span className="text-slate-200">
-                            YouTube tutorials
-                        </span>{' '}
-                        and informative{' '}
-                        <span className="text-slate-200">
-                            blogs on Web3 technologies
-                        </span>
-                        . I've found it to be a great learning experience for my
-                        own development, and hopefully has allowed others to
-                        gain understanding of the topics I have covered.
-                    </p>
-
-                    <section className="text-slate-400">
-                        Check out my&nbsp;
-                        <a
-                            href="https://medium.com/@lewis1broadhurst"
-                            target="_blank"
-                            className="text-orange-400"
-                        >
-                            Blog&nbsp;
-                        </a>
-                        and&nbsp;
-                        <a
-                            href="https://www.youtube.com/channel/UCv8iDXiyBoaNRtPmFt-fOYw"
-                            target="_blank"
-                            className="text-orange-400"
-                        >
-                            YouTube&nbsp;
-                        </a>
-                        videos below.
-                    </section>
-                </section>
-            </section>
-
-            <section className="flex flex-col gap-5">{contentToRender}</section>
-        </section>
-    )
+    return <section className="grid grid-cols-2 gap-5">{contentToRender}</section>;
 }
 
 export default ContentView

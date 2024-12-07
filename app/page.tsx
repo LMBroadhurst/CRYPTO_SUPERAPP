@@ -4,7 +4,7 @@ import Header from '@/components/global/Header'
 import Navigation, { NavigationTabs } from '@/components/global/Navigation'
 import AboutMeView from '@/components/home/Home'
 import PortfolioView from '@/components/home/PortfolioView'
-import ContentView from '@/components/home/ContentView'
+import ContentView from '@/components/blog/Blog'
 
 export default function page() {
 

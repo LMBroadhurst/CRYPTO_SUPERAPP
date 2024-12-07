@@ -25,8 +25,8 @@ const ContentPreview: FC<OwnProps> = ({
             <section
                 className="
                 flex flex-row justify-between items-center gap-8 rounded-lg p-4 bg-gray-800
-                transition-all duration-500 shadow-md shadow-sky-700
-                hover:cursor-pointer hover:bg-gray-700 hover:shadow-sky-600"
+                transition-all duration-500 shadow-sm shadow-sky-700
+                hover:cursor-pointer hover:bg-gray-900"
             >
                 <section className="flex flex-col gap-4 text-slate-400">
                     <h3 className="text-lg sm:text-xl text-slate-200">
@@ -35,7 +35,7 @@ const ContentPreview: FC<OwnProps> = ({
 
                     <section>{description}</section>
 
-                    <img src={image?.src} alt="" className="rounded-md" />
+                    <img src={image?.src} alt="" className="rounded-md"/>
 
                     <section className="flex flex-col-reverse gap-2 justify-between items-center sm:flex-row">
                         <span className="text-sm">{date}</span>
