@@ -1,5 +1,11 @@
 import React, {FC} from 'react'
-import {ExportOutlined} from '@ant-design/icons'
+import {
+    GithubOutlined,
+    LinkedinFilled,
+    MediumSquareFilled,
+    YoutubeFilled,
+} from '@ant-design/icons'
+import {SocialItem} from '@/components/home/HomeTypes'
 
 type OwnProps = {
     activeTabKey: string
@@ -7,37 +13,48 @@ type OwnProps = {
 }
 
 enum NavigationTabs {
-    ABOUT_ME = 'About Me',
+    HOME = 'Home',
+    BLOG = 'Blog',
     PORTFOLIO = 'Portfolio',
-    CONTENT = 'Content',
 }
 
 const navTabs: NavigationTabs[] = [
-    NavigationTabs.ABOUT_ME,
+    NavigationTabs.HOME,
+    NavigationTabs.BLOG,
     NavigationTabs.PORTFOLIO,
-    NavigationTabs.CONTENT,
+]
+
+const socials: SocialItem[] = [
+    { icon: <LinkedinFilled />, href: 'https://www.linkedin.com/in/lewis-broadhurst/' },
+    { icon: <GithubOutlined />, href: 'https://github.com/LMBroadhurst' },
+    { icon: <YoutubeFilled />, href: 'https://www.youtube.com/channel/UCv8iDXiyBoaNRtPmFt-fOYw' },
+    { icon: <MediumSquareFilled />, href: 'https://medium.com/@lewis1broadhurst' },
 ]
 
 const Navigation: FC<OwnProps> = ({activeTabKey, handleTabChange}) => {
     return (
-        <nav className="hidden lg:flex">
-            <ul className="flex flex-col gap-2 text-lg items-start text-slate-500">
+        <nav className="flex flex-row gap-12 items-center">
+            <ul className="flex flex-row gap-4 text-lg text-slate-500">
                 {navTabs.map(navTab => (
                     <li
-                        className={`
-                   duration-200 transition-all hover:text-orange-600 hover:cursor-pointer hover:translate-x-0.5
-                  ${activeTabKey === navTab && 'text-orange-400 translate-x-1'}
-                `}
-                        id={navTab}
-                        key={navTab}
-                        onClick={handleTabChange}
+                        className={`duration-200 transition-all hover:text-orange-700 hover:cursor-pointer ${activeTabKey === navTab && 'text-orange-600'}`}
+                        id={navTab} key={navTab} onClick={handleTabChange}
                     >
                         {navTab}
                     </li>
                 ))}
-                <button className="flex items-center gap-2 duration-200 transition-all hover:text-orange-600 hover:cursor-not-allowed hover:translate-x-0.5">
-                    Blog <ExportOutlined />
-                </button>
+            </ul>
+            <ul className='flex flex-row gap-2 text-lg text-slate-500'>
+                {socials.map(social => (
+                    <a
+                        href={social.href}
+                        className="duration-200 transition-all hover:text-orange-700 hover:cursor-pointer"
+                        key={social.href}
+                        target="_blank"
+                    >
+                        {social.icon}
+                    </a>
+                ))}
             </ul>
         </nav>
     )

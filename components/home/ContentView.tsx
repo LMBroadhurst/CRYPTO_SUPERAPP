@@ -101,7 +101,7 @@ const ContentView = () => {
     ))
 
     return (
-        <section className="flex flex-col gap-10 p-10 lg:p-0 lg:w-full">
+        <section className="flex flex-col gap-10 p-10">
             <section className="flex flex-col gap-2 text-justify">
                 <h2 className="text-2xl self-start">Content</h2>
 

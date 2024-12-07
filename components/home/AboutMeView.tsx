@@ -4,7 +4,7 @@ import BNTA from './Experience/BNTACard'
 
 const AboutMe = () => {
     return (
-        <section className="flex p-10 lg:p-0 lg:w-full">
+        <section className="">
             <section className="flex flex-col gap-2">
                 <h2 className="text-2xl self-start">About Me</h2>
 
