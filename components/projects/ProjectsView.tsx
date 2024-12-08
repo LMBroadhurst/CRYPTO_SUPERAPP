@@ -21,7 +21,7 @@ const contentToRender: CardContents[] = [
         ),
         date: 'Jan 2023',
         image: PYTHONTRADINGBOT,
-        tags: ['Python', 'DSA', 'Pandas', 'Jupyter Notebooks'],
+        tags: ['Python', 'DSA', 'Pandas', 'Jupyter'],
     },
     {
         url: 'https://funatfive.netlify.app/',
@@ -29,12 +29,8 @@ const contentToRender: CardContents[] = [
         description: (
             <p>
                 Tasked with building an app that would improve DEI in the workspace, I worked in a team of 3 to build
-                an app that would allow colleagues to vote on ideas for social events. The app would then anonymously
-                tally the results and choose the most popular option.
-                <br />
-                <br />
-                Note only the frontend is hosted and is not connected to the server. The login/register
-                functionality will not work.
+                an app that would allow colleagues to vote on ideas for social events. Note only the frontend is hosted 
+                and is not connected to the server, therefore the login/register functionality will not work.
             </p>
         ),
         date: 'Autumn 2022',
@@ -84,27 +80,20 @@ const contentToRender: CardContents[] = [
 ]
 
 const Projects = () => {
-    return (
-        <section className="mb-32 lg:mb-0">
-            <section className="flex flex-col gap-2 p-10 lg:p-0">
-                <section className="grid grid-cols-2 gap-5 text-slate-400 text-justify">
+    const content = contentToRender.map(project => {
+        const { url, title, description, date, image, tags } = project
+        return <ContentPreview
+            key={title}
+            date={date}
+            url={url}
+            tags={tags}
+            title={title}
+            image={image}
+            description={description}
+        />
+    });
 
-                    {contentToRender.map(project => {
-                        const { url, title, description, date, image, tags } = project
-                        return <ContentPreview
-                            key={title}
-                            date={date}
-                            url={url}
-                            tags={tags}
-                            title={title}
-                            image={image}
-                            description={description}
-                        />
-                    })}
-                </section>
-            </section>
-        </section>
-    )
+    return <section className="grid gap-5  lg:grid-cols-2">{content}</section>;
 }
 
 export default Projects

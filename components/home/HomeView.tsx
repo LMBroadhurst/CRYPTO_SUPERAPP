@@ -3,7 +3,7 @@ import MahiMarkets from './Experience/MahiMarkets'
 import BNTA from './Experience/BNTA'
 import Vanguard from './Experience/Vanguard'
 
-const Home = () => {
+const HomeView = () => {
     return <section className='flex flex-col gap-8'>
         <section className="flex flex-col gap-4 divide-y divide-slate-700">
             <h2 className="text-2xl self-start text-slate-300">About Me</h2>
@@ -23,4 +23,4 @@ const Home = () => {
     </section>
 }
 
-export default Home
+export default HomeView

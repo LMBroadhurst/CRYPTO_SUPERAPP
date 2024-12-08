@@ -81,7 +81,7 @@ const publishedContentPreview: CardContents[] = [
     },
 ]
 
-const ContentView = () => {
+const BlogView = () => {
     const contentToRender = publishedContentPreview.map(pc => (
         <ContentPreview
             key={pc.date}
@@ -92,9 +92,9 @@ const ContentView = () => {
             date={pc.date}
             tags={pc.tags}
         />
-    ))
+    ));
 
-    return <section className="grid grid-cols-2 gap-5">{contentToRender}</section>;
+    return <section className="grid gap-5  lg:grid-cols-2">{contentToRender}</section>;
 }
 
-export default ContentView
+export default BlogView
