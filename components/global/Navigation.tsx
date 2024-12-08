@@ -32,32 +32,30 @@ const socials: SocialItem[] = [
 ]
 
 const Navigation: FC<OwnProps> = ({activeTabKey, handleTabChange}) => {
-    return (
-        <nav className="flex flex-row gap-12 items-center">
-            <ul className="flex flex-row gap-4 text-lg text-slate-500">
-                {navTabs.map(navTab => (
-                    <li
-                        className={`duration-200 transition-all hover:text-orange-700 hover:cursor-pointer ${activeTabKey === navTab && 'text-orange-600'}`}
-                        id={navTab} key={navTab} onClick={handleTabChange}
-                    >
-                        {navTab}
-                    </li>
-                ))}
-            </ul>
-            <ul className='flex flex-row gap-2 text-lg text-slate-500'>
-                {socials.map(social => (
-                    <a
-                        href={social.href}
-                        className="duration-200 transition-all hover:text-orange-700 hover:cursor-pointer"
-                        key={social.href}
-                        target="_blank"
-                    >
-                        {social.icon}
-                    </a>
-                ))}
-            </ul>
-        </nav>
-    )
+    return <nav className="flex  flex-col lg:flex-row lg:items-center lg:gap-4 xl:gap-12">
+        <ul className="flex flex-row lg:text-lg text-slate-500 gap-2 xl:gap-4">
+            {navTabs.map(navTab => (
+                <li
+                    className={`duration-200 transition-all hover:text-orange-700 hover:cursor-pointer ${activeTabKey === navTab && 'text-orange-600'}`}
+                    id={navTab} key={navTab} onClick={handleTabChange}
+                >
+                    {navTab}
+                </li>
+            ))}
+        </ul>
+        <ul className='flex flex-row gap-2 lg:text-lg text-slate-500'>
+            {socials.map(social => (
+                <a
+                    href={social.href}
+                    className="duration-200 transition-all hover:text-orange-700 hover:cursor-pointer"
+                    key={social.href}
+                    target="_blank"
+                >
+                    {social.icon}
+                </a>
+            ))}
+        </ul>
+    </nav>
 }
 
 export default Navigation

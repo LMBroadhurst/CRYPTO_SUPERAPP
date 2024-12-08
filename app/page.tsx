@@ -12,8 +12,8 @@ export default function page() {
     const handleTabChange = (e: any) => setActiveTabKey(e.target.id)
 
     return <main className="text-slate-50 bg-slate-950 flex flex-col pt-10 pb-20">
-        <section className="flex flex-col gap-10 w-2/3 mx-auto">
-            <section className="flex flex-row justify-between">
+        <section className="flex flex-col gap-8 lg:gap-10 w-2/3 mx-auto max-w-[1000px]">
+            <section className="flex flex-col gap-2 lg:justify-between lg:flex-row">
                 <Header />
                 <Navigation activeTabKey={activeTabKey} handleTabChange={handleTabChange} />
             </section>
