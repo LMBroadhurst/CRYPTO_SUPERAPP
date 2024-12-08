@@ -15,13 +15,13 @@ type OwnProps = {
 enum NavigationTabs {
     HOME = 'Home',
     BLOG = 'Blog',
-    PORTFOLIO = 'Portfolio',
+    PROJECTS = 'Projects',
 }
 
 const navTabs: NavigationTabs[] = [
     NavigationTabs.HOME,
     NavigationTabs.BLOG,
-    NavigationTabs.PORTFOLIO,
+    NavigationTabs.PROJECTS,
 ]
 
 const socials: SocialItem[] = [

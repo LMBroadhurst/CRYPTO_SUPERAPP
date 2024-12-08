@@ -20,8 +20,7 @@ const ContentPreview: FC<OwnProps> = ({
     date,
     tags,
 }) => {
-    return (
-        <Link className="self-stretch" href={url} target="_blank">
+    return <Link className="self-stretch" href={url} target="_blank">
             <section
                 className="
                 flex flex-row justify-between items-center gap-8 rounded-lg p-4 bg-gray-800
@@ -50,7 +49,6 @@ const ContentPreview: FC<OwnProps> = ({
                 </section>
             </section>
         </Link>
-    )
 }
 
 export default ContentPreview
