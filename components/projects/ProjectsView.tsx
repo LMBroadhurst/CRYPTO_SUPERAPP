@@ -93,7 +93,31 @@ const Projects = () => {
         />
     });
 
-    return <section className="grid gap-5  lg:grid-cols-2">{content}</section>;
+    const [leftColumn, rightColumn] = contentToRender.reduce<[JSX.Element[], JSX.Element[]]>(
+        (acc, pc, index) => {
+            acc[index % 2].push(
+                <ContentPreview
+                    key={pc.date}
+                    url={pc.url}
+                    title={pc.title}
+                    description={pc.description}
+                    image={pc.image}
+                    date={pc.date}
+                    tags={pc.tags}
+                />
+            );
+            return acc;
+        },
+        [[], []]
+    );
+
+    return <>
+        <section className="grid gap-5 lg:hidden">{content}</section>
+        <section className="hidden lg:grid lg:gap-5 lg:grid-cols-2">
+            <section className='flex flex-col gap-5'>{leftColumn}</section>
+            <section className='flex flex-col gap-5'>{rightColumn}</section>
+        </section>
+    </>;
 }
 
 export default Projects

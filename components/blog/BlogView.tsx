@@ -18,7 +18,7 @@ const publishedContentPreview: CardContents[] = [
                 the protocol.
             </p>
         ),
-        date: 'May 26th 2023',
+        date: 'May 2023',
         image: UNISWAPP2,
         tags: ['AMM', 'Web3', 'Uniswap'],
     },
@@ -32,7 +32,7 @@ const publishedContentPreview: CardContents[] = [
                 DeFi and the benefits of DeFi for anyone new to the space.
             </p>
         ),
-        date: 'May 19th 2023',
+        date: 'May 2023',
         image: UNISWAPP1,
         tags: ['AMM', 'Web3', 'Uniswap'],
     },
@@ -46,7 +46,7 @@ const publishedContentPreview: CardContents[] = [
                 standard in the crypto space.
             </p>
         ),
-        date: 'May 12th 2023',
+        date: 'May 2023',
         image: ERC20,
         tags: ['ERC20', 'Web3', 'ETH'],
     },
@@ -62,7 +62,7 @@ const publishedContentPreview: CardContents[] = [
                 flexbox.
             </p>
         ),
-        date: 'Aug 15th 2022',
+        date: 'Aug 2022',
         image: FLEXBOX,
         tags: ['Flexbox', 'CSS', 'UI'],
     },
@@ -75,7 +75,7 @@ const publishedContentPreview: CardContents[] = [
                 In this 90min tutorial, I recreate a basic website from my coding bootcamp using HTML, Tailwind, and a little JS.
             </p>
         ),
-        date: 'Aug 5th 2022',
+        date: 'Aug 2022',
         image: TAILWIND,
         tags: ['Tailwind', 'CSS', 'UI'],
     },
@@ -94,7 +94,31 @@ const BlogView = () => {
         />
     ));
 
-    return <section className="grid gap-5  lg:grid-cols-2">{contentToRender}</section>;
+    const [leftColumn, rightColumn] = publishedContentPreview.reduce<[JSX.Element[], JSX.Element[]]>(
+        (acc, pc, index) => {
+            acc[index % 2].push(
+                <ContentPreview
+                    key={pc.date}
+                    url={pc.url}
+                    title={pc.title}
+                    description={pc.description}
+                    image={pc.image}
+                    date={pc.date}
+                    tags={pc.tags}
+                />
+            );
+            return acc;
+        },
+        [[], []]
+    );
+
+    return <>
+        <section className="grid gap-5 lg:hidden">{contentToRender}</section>
+        <section className="hidden lg:grid lg:gap-5 lg:grid-cols-2">
+            <section className='flex flex-col gap-5'>{leftColumn}</section>
+            <section className='flex flex-col gap-5'>{rightColumn}</section>
+        </section>
+    </>;
 }
 
 export default BlogView
